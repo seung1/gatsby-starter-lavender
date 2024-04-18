@@ -3,10 +3,10 @@
 A blog template with minimal interfaces based on Gatsby, focused on readability.
 
 ## Demo
+
 [Live Demo](https://gatsby-starter-lavender.vercel.app)
 
 ![screenshot](./assets/screenshot.png)
-
 
 ## 🚀 Quick start
 
@@ -48,7 +48,7 @@ A blog template with minimal interfaces based on Gatsby, focused on readability.
 
 ### Gatsby Cloud
 
-  [<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https%3A%2F%2Fgithub.com%2Fblurfx%2Fgatsby-starter-lavender)
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https%3A%2F%2Fgithub.com%2Fblurfx%2Fgatsby-starter-lavender)
 
 ## Customization
 
