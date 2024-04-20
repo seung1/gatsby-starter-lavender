@@ -17,7 +17,7 @@ const ArticleListItem = ({ slug, title, description, thumbnail }: Props) => (
       itemScope
       itemType="http://schema.org/Article"
     >
-      <Thumbnail src={thumbnail} />
+      {thumbnail !== "" ? <Thumbnail src={thumbnail} /> : null}
       <Content>
         <Header>
           <Title>

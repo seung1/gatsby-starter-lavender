@@ -1,7 +1,7 @@
-import React from 'react';
-import { Helmet } from 'react-helmet';
+import React from "react";
+import { Helmet } from "react-helmet";
 
-import { useSeo } from '~/hooks/useSeo';
+import { useSeo } from "~/hooks/useSeo";
 
 interface Props {
   description: string;
@@ -11,7 +11,13 @@ interface Props {
   noSiteName?: boolean;
 }
 
-const Seo = ({ description, lang, meta = [], title, noSiteName = false }: Props) => {
+const Seo = ({
+  description,
+  lang,
+  meta = [],
+  title,
+  noSiteName = false,
+}: Props) => {
   const { site } = useSeo();
 
   if (site === undefined) {
@@ -19,7 +25,7 @@ const Seo = ({ description, lang, meta = [], title, noSiteName = false }: Props)
   }
 
   const metaDescription = description || site.siteMetadata?.description;
-  const defaultTitle= site.siteMetadata?.title;
+  const defaultTitle = site.siteMetadata?.title;
 
   return (
     <Helmet
@@ -30,35 +36,39 @@ const Seo = ({ description, lang, meta = [], title, noSiteName = false }: Props)
       titleTemplate={noSiteName ? undefined : `%s | ${defaultTitle}`}
       meta={[
         {
-          name: 'description',
+          name: "google-site-verification",
+          content: "UTxT7NGuLOoWm9RUU1LWe7jSHe8PWqjoNXduQFiFq7o",
+        },
+        {
+          name: "description",
           content: metaDescription,
         },
         {
-          property: 'og:title',
+          property: "og:title",
           content: title,
         },
         {
-          property: 'og:description',
+          property: "og:description",
           content: metaDescription,
         },
         {
-          property: 'og:type',
-          content: 'website',
+          property: "og:type",
+          content: "website",
         },
         {
-          name: 'twitter:card',
-          content: 'summary',
+          name: "twitter:card",
+          content: "summary",
         },
         {
-          name: 'twitter:creator',
-          content: site.siteMetadata?.social?.twitter || '',
+          name: "twitter:creator",
+          content: site.siteMetadata?.social?.twitter || "",
         },
         {
-          name: 'twitter:title',
+          name: "twitter:title",
           content: title,
         },
         {
-          name: 'twitter:description',
+          name: "twitter:description",
           content: metaDescription,
         },
       ].concat(meta)}

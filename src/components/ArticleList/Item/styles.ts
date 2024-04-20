@@ -5,9 +5,7 @@ export const Article = styled("article", {
   // marginBottom: "1rem",
 });
 
-export const Content = styled("div", {
-  marginLeft: "2rem",
-});
+export const Content = styled("div", {});
 
 export const Header = styled("header", {
   margin: "1rem auto",
@@ -36,5 +34,5 @@ export const Thumbnail = styled("img", {
 
   width: "6rem",
   height: "6rem",
-  margin: "1rem 0",
+  margin: "1rem 2rem 0 0",
 });
