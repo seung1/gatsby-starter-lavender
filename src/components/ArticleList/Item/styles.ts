@@ -2,7 +2,7 @@ import { styled } from "~/stitches.config";
 
 export const Article = styled("article", {
   display: "flex",
-  marginBottom: "1rem",
+  // marginBottom: "1rem",
 });
 
 export const Content = styled("div", {
@@ -36,5 +36,5 @@ export const Thumbnail = styled("img", {
 
   width: "6rem",
   height: "6rem",
-  margin: 0,
+  margin: "1rem 0",
 });

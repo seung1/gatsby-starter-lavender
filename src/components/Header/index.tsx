@@ -13,6 +13,10 @@ interface Props {
 const Header = ({ title, resetFilter }: Props) => {
   return (
     <Container>
+      <meta
+        name="google-site-verification"
+        content="UTxT7NGuLOoWm9RUU1LWe7jSHe8PWqjoNXduQFiFq7o"
+      />
       <TitleWrapper>
         <Circle />
         <Title>
