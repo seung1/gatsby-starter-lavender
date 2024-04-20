@@ -1,8 +1,7 @@
 const config = {
   title: "seung1 blog", // Blog name
   author: "seung1", // Your name
-  description:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description: "프론트의 무궁무진한 발전을 기대합니다.",
   siteUrl: "https://gatsby-starter-lavender.vercel.app",
   thumbnail: "/thumbnails/main.png", // Default blog thumbnail. i.e. '/thumbnails/main.png'
   social: {
