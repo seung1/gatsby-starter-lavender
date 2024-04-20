@@ -1,108 +1,55 @@
 ---
-title: New Beginnings
-date: 2021-07-01
-description: This is a custom description for SEO and Open Graph purposes, rather than the default generated excerpt. Simply add a description field to the frontmatter.
+title: 좌충우돌 기술블로그 시작기
+date: 2024-04-21
+description: "커스텀하고 싶은 부분이 너무 많은 블로그!"
+tags: [blog, Development]
+thumbnail: /thumbnails/hello-world.jpg
+order: 100
 ---
 
-Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-right at the coast of the Semantics, a large language ocean. A small river named
-Duden flows by their place and supplies it with the necessary regelialia.
+## 블로그를 드디어 시작했다
 
-## On deer horse aboard tritely yikes and much
+해야지 해야지 생각만하다가 못한게 벌써 1년정도 지났다.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+그동안 쉽게 시작을 하지 못했던건 나 스스로 프론트엔드 개발자의 기술블로그에 대한 환상 같은게 있었다.
 
-- This however showed weasel
-- Well uncritical so misled
-  - this is very interesting
-- Goodness much until that fluid owl
+- 뭔가 화려하고 감각적인 디자인에
+- 분명 인터렉션도 어마무시할 것이며
+- 반응형, 다크모드는 당연하고 SEO 최적화 등등
 
-When she reached the first hills of the **Italic Mountains**, she had a last
-view back on the skyline of her hometown _Bookmarksgrove_, the headline of
-[Alphabet Village](http://google.com) and the subline of her own road, the Line
-Lane. Pityful a rhetoric question ran over her cheek, then she continued her
-way. On her way she met a copy.
+엄청난 선입견에 휩싸여 시작하지 못했다.
 
-### Overlaid the jeepers uselessly much excluding
+그래서 직접 개발해야하나, 아니면 티스토리나 velog를 해야하나 고민이었다.
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with
-[Longe and Parole](http://google.com) and dragged her into their agency, where
-they abused her for their projects again and again. And if she hasn’t been
-rewritten, then they are still using her.
+<br/>
 
-> Far far away, behind the word mountains, far from the countries Vokalia and
-> Consonantia, there live the blind texts. Separated they live in Bookmarksgrove
-> right at the coast of the Semantics, a large language ocean.
+## 탬플릿으로 쉽게 개발하자
 
-It is a paradisematic country, in which roasted parts of sentences fly into your
-mouth. Even the all-powerful Pointing has no control about the blind texts it is
-an almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar.
+그러던중 [오종택 개발자님의 개발블로그](https://saengmotmi.netlify.app/)를 보게되었고 생각보다 깔끔하고 정말 필요한 기능만 갖추고 있었고 어떻게 구현하셨을까 깃허브에 들어가보았는데 [탬플릿](https://github.com/blurfx/gatsby-starter-lavender)을 이용하셨다는 사실을 알게되었다.
 
-### According a funnily until pre-set or arrogant well cheerful
+이미 잘만들어져 있는 탬플릿에 내가 원하는 커스텀만 살짝 첨가해서 진짜 내 블로그를 만들면 좋겠다 싶었다.
 
-The Big Oxmox advised her not to do so, because there were thousands of bad
-Commas, wild Question Marks and devious Semikoli, but the Little Blind Text
-didn’t listen. She packed her seven versalia, put her initial into the belt and
-made herself on the way.
+다 만들고나서 알게된 사실은, 저 탬플릿을 개발하신 분께서 [다른 탬플릿](https://github.com/blurfx/ambienxo)도 만드셔서 여러개 중에서 선택할 수 있었는데 살짝 아쉽다.
 
-1.  So baboon this
-2.  Mounted militant weasel gregariously admonishingly straightly hey
-3.  Dear foresaw hungry and much some overhung
-4.  Rash opossum less because less some amid besides yikes jeepers frenetic
-    impassive fruitlessly shut
+디자이너도 아니고 너무 미적인 부분에 치우져 정말 중요한 본질인 글을 쓰는것을 계속 오랜시간 놓치고 있었다.
 
-When she reached the first hills of the Italic Mountains, she had a last view
-back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet
-Village and the subline of her own road, the Line Lane. Pityful a rhetoric
-question ran over her cheek, then she continued her way. On her way she met a
-copy.
+회사 다니면서 매주하는 스터디도 정리해서 올리고 바람도 올리고 열심히 포스팅해야겠다.
 
-> The copy warned the Little Blind Text, that where it came from it would have
-> been rewritten a thousand times and everything that was left from its origin
-> would be the word "and" and the Little Blind Text should turn around and
-> return to its own, safe country.
+글도 자꾸 써야 늘고 구조도 잡히고 더 읽기 쉬운 글이 되지 않을까 싶다.
 
-But nothing the copy said could convince her and so it didn’t take long until a
-few insidious Copy Writers ambushed her, made her drunk with Longe and Parole
-and dragged her into their agency, where they abused her for their projects
-again and again. And if she hasn’t been rewritten, then they are still using
-her. Far far away, behind the word mountains, far from the countries Vokalia and
-Consonantia, there live the blind texts.
+<br/>
 
-#### Silent delightfully including because before one up barring chameleon
+## TODO
 
-Separated they live in Bookmarksgrove right at the coast of the Semantics, a
-large language ocean. A small river named Duden flows by their place and
-supplies it with the necessary regelialia. It is a paradisematic country, in
-which roasted parts of sentences fly into your mouth.
+1. 가능하다면 댓글 프로필 이미지 부분 사각형이 아니라 원형으로 수정하기
+2. 글 리스트에서 썸네일, 날짜, 태그 보이게 레이아웃 수정하기
+3. 날짜순이 아니라 원하는 순서대로 리스트 보이게 하기
+4. 글 하단에 우측글, 좌측글 이동하는 부분 좀더 직관적으로 수정하기
+5. 웹에서는 차례가 우측에 스크롤 따라다니게 수정하기
+6. 거슬리지 않는 선에서 구글 애드센스 추가해보기
 
-Even the all-powerful Pointing has no control about the blind texts it is an
-almost unorthographic life One day however a small line of blind text by the
-name of Lorem Ipsum decided to leave for the far World of Grammar. The Big Oxmox
-advised her not to do so, because there were thousands of bad Commas, wild
-Question Marks and devious Semikoli, but the Little Blind Text didn’t listen.
+<br/>
 
-##### Wherever far wow thus a squirrel raccoon jeez jaguar this from along
+---
 
-She packed her seven versalia, put her initial into the belt and made herself on
-the way. When she reached the first hills of the Italic Mountains, she had a
-last view back on the skyline of her hometown Bookmarksgrove, the headline of
-Alphabet Village and the subline of her own road, the Line Lane. Pityful a
-rhetoric question ran over her cheek, then she continued her way. On her way she
-met a copy.
-
-###### Slapped cozy a that lightheartedly and far
-
-The copy warned the Little Blind Text, that where it came from it would have
-been rewritten a thousand times and everything that was left from its origin
-would be the word "and" and the Little Blind Text should turn around and return
-to its own, safe country. But nothing the copy said could convince her and so it
-didn’t take long until a few insidious Copy Writers ambushed her, made her drunk
-with Longe and Parole and dragged her into their agency, where they abused her
-for their projects again and again.
+gatsby에 graphql이라서 너무 구조가 생소하다. 수정하는게 쉽지않을 듯하다.

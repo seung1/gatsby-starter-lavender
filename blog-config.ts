@@ -2,7 +2,7 @@ const config = {
   title: "seung1 blog", // Blog name
   author: "seung1", // Your name
   description: "프론트의 무궁무진한 발전을 기대합니다.",
-  siteUrl: "https://gatsby-starter-lavender.vercel.app",
+  siteUrl: "https://seung1.netlify.app",
   thumbnail: "/thumbnails/main.png", // Default blog thumbnail. i.e. '/thumbnails/main.png'
   social: {
     github: "seung1", // GitHub username
@@ -16,7 +16,7 @@ const config = {
     disqusShortName: "", // Disqus short name
   },
   icon: "src/images/gatsby-icon.png", // path of blog icon
-  googleAnalytics: "0", // Google Analytics tracking id
+  googleAnalytics: "G-LY5PD0355G", // Google Analytics tracking id
 };
 
 export default config;

@@ -1,9 +1,10 @@
 ---
 title: Hello World
 date: 2021-07-10
-description: "Hello World"
+description: "Hello World 이 글은 곧 지울 예정입니다. 이 글안에 참고하기 좋은 내용이 많아서 우선은 살려두고 있습니다. 그리고 두줄까지 늘어났을때 과연 어떻게 표시될지도 궁금합니다. 더 길게 쓴다면 어떻게 될까요. 무한정 늘어나는 것인가요 대단하군요. "
 tags: [Java, Development]
 thumbnail: /thumbnails/hello-world.jpg
+order: 2
 ---
 
 This is my first post on my new fake blog! How exciting!
@@ -26,7 +27,7 @@ Oh, and here's a great quote from this Wikipedia on
 You can also write code blocks here!
 
 ```js
-const saltyDuckEgg = "chinese preserved food product"
+const saltyDuckEgg = "chinese preserved food product";
 ```
 
 | Number | Title                                    | Year |
@@ -147,8 +148,7 @@ This is a paragraph.
 1. Buy flour and salt
 1. Mix together with water
 1. Bake
-    2. Don't Bake
-
+1. Don't Bake
 
 ```markdown
 1. Buy flour and salt
@@ -232,7 +232,6 @@ This paragraph has some `code` in it.
 
 LaTeX supported by KaTeX.
 
-
 $a^2 + b^2 = c^2$
 
 $$
@@ -242,4 +241,3 @@ A @>a>> B \\
 C @= D
 \end{CD}
 $$
-

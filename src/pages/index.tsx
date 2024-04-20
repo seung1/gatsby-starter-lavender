@@ -33,6 +33,7 @@ const BlogIndex = ({
     filterPostsByTitle(data.allMarkdownRemark.nodes, titleFilter),
     currentTag
   );
+
   const articlePerPage = 5;
   const totalPage = Math.ceil(posts.length / articlePerPage);
 
@@ -69,6 +70,8 @@ const BlogIndex = ({
     }, [page, setPage, totalPage])
   );
 
+  console.log(posts);
+
   return (
     <Layout location={location} title={siteTitle} resetFilter={resetFilter}>
       <Seo
@@ -89,9 +92,7 @@ const BlogIndex = ({
       {posts.length === 0 ? (
         <p>No posts found.</p>
       ) : (
-        <>
-          <ArticleList posts={posts.slice(0, page * articlePerPage)} />
-        </>
+        <ArticleList posts={posts.slice(0, page * articlePerPage)} />
       )}
       <div className="infinite-scroll" ref={infiniteScrollRef} />
     </Layout>
@@ -109,7 +110,7 @@ export const pageQuery = graphql`
         thumbnail
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___order], order: DESC }) {
       nodes {
         excerpt
         fields {
@@ -119,6 +120,7 @@ export const pageQuery = graphql`
           title
           description
           tags
+          thumbnail
         }
       }
     }
