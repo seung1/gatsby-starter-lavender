@@ -70,8 +70,6 @@ const BlogIndex = ({
     }, [page, setPage, totalPage])
   );
 
-  console.log(posts);
-
   return (
     <Layout location={location} title={siteTitle} resetFilter={resetFilter}>
       <Seo
@@ -81,7 +79,9 @@ const BlogIndex = ({
         meta={meta}
         noSiteName
       />
+
       <Profile />
+
       <ArticleFilter
         tags={tags}
         titleFilter={titleFilter}
@@ -89,6 +89,7 @@ const BlogIndex = ({
         currentTag={currentTag}
         setCurrentTag={setCurrentTag}
       />
+
       {posts.length === 0 ? (
         <p>No posts found.</p>
       ) : (

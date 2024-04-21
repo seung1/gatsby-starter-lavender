@@ -2,7 +2,6 @@ import { styled } from "~/stitches.config";
 
 export const Article = styled("article", {
   display: "flex",
-  // marginBottom: "1rem",
 });
 
 export const Content = styled("div", {});
