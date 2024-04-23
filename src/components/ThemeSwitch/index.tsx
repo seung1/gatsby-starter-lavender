@@ -1,8 +1,15 @@
-import React, { memo } from 'react';
+import React, { memo } from "react";
 
-import { useDarkMode } from '~/hooks/useDarkMode';
+import { useDarkMode } from "~/hooks/useDarkMode";
 
-import { Checkbox, Container, Shadow, Thumb, ThumbWrapper, Track } from './styles';
+import {
+  Checkbox,
+  Container,
+  Shadow,
+  Thumb,
+  ThumbWrapper,
+  Track,
+} from "./styles";
 
 const ThemeSwitch = () => {
   const [darkMode, setDarkMode] = useDarkMode();
@@ -12,13 +19,21 @@ const ThemeSwitch = () => {
   };
 
   return (
-    <Container role={'button'} aria-pressed={darkMode} onClick={onThemeSwitchClick}>
+    <Container
+      role={"button"}
+      aria-pressed={darkMode}
+      onClick={onThemeSwitchClick}
+    >
       <Track />
       <ThumbWrapper>
         <Thumb />
         <Shadow />
       </ThumbWrapper>
-      <Checkbox type='checkbox' aria-label={'Theme Switch'} defaultChecked={darkMode} />
+      <Checkbox
+        type="checkbox"
+        aria-label={"Theme Switch"}
+        defaultChecked={darkMode}
+      />
     </Container>
   );
 };

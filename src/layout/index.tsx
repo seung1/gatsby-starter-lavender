@@ -1,17 +1,18 @@
-import type { PageProps } from 'gatsby';
-import React, { ComponentProps } from 'react';
+import type { PageProps } from "gatsby";
+import React, { ComponentProps } from "react";
 
-import Footer from '~/components/Footer';
-import Header from '~/components/Header';
-import { useDarkMode } from '~/hooks/useDarkMode';
+import Footer from "~/components/Footer";
+import Header from "~/components/Header";
+import { useDarkMode } from "~/hooks/useDarkMode";
 
-import { Container, globalStyles, Root } from './styles';
+import { Container, globalStyles, Root } from "./styles";
 
-type Props = React.PropsWithChildren<Pick<PageProps, 'location'>> & ComponentProps<typeof Header>;
+type Props = React.PropsWithChildren<Pick<PageProps, "location">> &
+  ComponentProps<typeof Header>;
 
 const Layout = ({ title, children, resetFilter }: Props) => {
-  const [isDarkMode, ] = useDarkMode();
-  globalStyles(isDarkMode ? 'dark' : 'light');
+  const [isDarkMode] = useDarkMode();
+  globalStyles(isDarkMode ? "dark" : "light");
 
   return (
     <Root>

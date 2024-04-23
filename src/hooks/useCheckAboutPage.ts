@@ -1,9 +1,9 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby";
 
 export const useCheckAboutPage = (): boolean =>
   useStaticQuery<GatsbyTypes.CheckAboutPageQuery>(graphql`
     query CheckAboutPage {
-      allSitePage(filter: { path: { eq: "/about/" }}) {
+      allSitePage(filter: { path: { eq: "/about/" } }) {
         edges {
           node {
             id

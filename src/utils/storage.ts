@@ -1,7 +1,6 @@
-import { win } from './window';
+import { win } from "./window";
 
-
-const KEY_PREFIX = '__lavender__';
+const KEY_PREFIX = "__lavender__";
 const KEY_PAGE = `${KEY_PREFIX}/page`;
 
 export const savePage = (page: number) => {

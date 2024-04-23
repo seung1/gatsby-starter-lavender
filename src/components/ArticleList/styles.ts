@@ -1,7 +1,7 @@
-import { styled } from '~/stitches.config';
+import { styled } from "~/stitches.config";
 
-export const Container = styled('ol', {
+export const Container = styled("ol", {
   marginLeft: 0,
 
-  listStyle: 'none',
+  listStyle: "none",
 });

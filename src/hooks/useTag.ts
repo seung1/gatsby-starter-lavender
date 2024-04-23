@@ -1,8 +1,7 @@
-import * as qs from 'query-string';
-import { useEffect, useState } from 'react';
+import * as qs from "query-string";
+import { useEffect, useState } from "react";
 
-import { TAG } from '~/constants';
-
+import { TAG } from "~/constants";
 
 export const useTag = (): [string, (t: string) => void] => {
   const [currentTag, setCurrentTag] = useState<string>(TAG.ALL);
@@ -22,10 +21,10 @@ export const useTag = (): [string, (t: string) => void] => {
       setCurrentTag(tag);
     }
 
-    window.addEventListener('popstate', onPopState);
+    window.addEventListener("popstate", onPopState);
 
     return () => {
-      window.removeEventListener('popstate', onPopState);
+      window.removeEventListener("popstate", onPopState);
     };
   }, []);
 
@@ -42,15 +41,18 @@ export const useTag = (): [string, (t: string) => void] => {
       params.tag = currentTag;
     }
 
-    const nextUrl = qs.stringifyUrl({
-      url: location.pathname,
-      query: params,
-    }, {
-      skipNull: true,
-      skipEmptyString: true,
-    });
+    const nextUrl = qs.stringifyUrl(
+      {
+        url: location.pathname,
+        query: params,
+      },
+      {
+        skipNull: true,
+        skipEmptyString: true,
+      }
+    );
 
-    history.pushState(params, '', nextUrl);
+    history.pushState(params, "", nextUrl);
   }, [currentTag]);
 
   return [currentTag, setCurrentTag];

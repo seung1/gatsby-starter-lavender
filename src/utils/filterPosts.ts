@@ -1,12 +1,14 @@
-import { TAG } from '~/constants';
+import { TAG } from "~/constants";
 
-type Posts = GatsbyTypes.BlogIndexQuery['allMarkdownRemark']['nodes'];
+type Posts = GatsbyTypes.BlogIndexQuery["allMarkdownRemark"]["nodes"];
 
 export const filterPostsByTitle = (posts: Posts, title: string): Posts => {
-  if (title === '') {
+  if (title === "") {
     return posts;
   }
-  return posts.filter((post) => post.frontmatter?.title?.toLocaleLowerCase().includes(title));
+  return posts.filter((post) =>
+    post.frontmatter?.title?.toLocaleLowerCase().includes(title)
+  );
 };
 
 export const filterPostsByTag = (posts: Posts, tag: string): Posts => {

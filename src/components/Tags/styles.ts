@@ -1,17 +1,17 @@
-import { styled } from '~/stitches.config';
+import { styled } from "~/stitches.config";
 
-export const TagList = styled('ul', {
+export const TagList = styled("ul", {
   margin: 0,
 });
 
-export const Tag = styled('li', {
-  display: 'inline-block',
+export const Tag = styled("li", {
+  display: "inline-block",
 
-  listStyle: 'none',
+  listStyle: "none",
 
-  '&:before': {
-    margin: '0 0.25rem',
+  "&:before": {
+    margin: "0 0.25rem",
 
-    content: '•',
+    content: "•",
   },
 });

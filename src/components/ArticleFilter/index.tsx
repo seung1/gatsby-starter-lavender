@@ -1,8 +1,13 @@
-import React, { ChangeEventHandler, memo, MouseEvent, useCallback } from 'react';
+import React, {
+  ChangeEventHandler,
+  memo,
+  MouseEvent,
+  useCallback,
+} from "react";
 
-import { TAG } from '~/constants';
+import { TAG } from "~/constants";
 
-import { Container, Title, TagListWrapper, Tag, Input } from './styles';
+import { Container, Title, TagListWrapper, Tag, Input } from "./styles";
 
 interface Props {
   tags: string[];
@@ -12,40 +17,49 @@ interface Props {
   setCurrentTag: (tag: string) => void;
 }
 
-const ArticleFilter = ({ tags, currentTag, setCurrentTag, titleFilter, onTitleFilterChange }: Props) => {
-  const onClickTag = useCallback((e: MouseEvent<HTMLButtonElement>) => {
-    const tag = (e.target as HTMLButtonElement).dataset['tag'] as string;
+const ArticleFilter = ({
+  tags,
+  currentTag,
+  setCurrentTag,
+  titleFilter,
+  onTitleFilterChange,
+}: Props) => {
+  const onClickTag = useCallback(
+    (e: MouseEvent<HTMLButtonElement>) => {
+      const tag = (e.target as HTMLButtonElement).dataset["tag"] as string;
 
-    setCurrentTag(tag);
-  }, [setCurrentTag]);
+      setCurrentTag(tag);
+    },
+    [setCurrentTag]
+  );
 
   return (
     <Container>
       <Title>Filter</Title>
       <Input
-        type='text'
-        placeholder='Article name..'
+        type="text"
+        placeholder="Article name.."
         value={titleFilter}
         onChange={onTitleFilterChange}
       />
       <TagListWrapper>
         <Tag
-          type='button'
+          type="button"
           data-tag={TAG.ALL}
           onClick={onClickTag}
           filtered={currentTag === TAG.ALL}
         >
-          { TAG.ALL }
+          {TAG.ALL}
         </Tag>
         {tags.map((tag) => (
           <Tag
-            type='button'
+            type="button"
             key={tag}
             data-tag={tag}
             onClick={onClickTag}
             filtered={currentTag === tag}
           >
-            { tag }
+            {tag}
           </Tag>
         ))}
       </TagListWrapper>

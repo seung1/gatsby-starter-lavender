@@ -1,9 +1,9 @@
-import React, { createRef, useEffect } from 'react';
+import React, { createRef, useEffect } from "react";
 
-import { useDarkMode } from '~/hooks/useDarkMode';
+import { useDarkMode } from "~/hooks/useDarkMode";
 
-const src = 'https://utteranc.es/client.js';
-const branch = 'master';
+const src = "https://utteranc.es/client.js";
+const branch = "master";
 
 interface Props {
   repo: string;
@@ -13,19 +13,19 @@ const Utterances = ({ repo }: Props) => {
   const ref = createRef<HTMLDivElement>();
 
   const [darkMode] = useDarkMode();
-  const utteranceTheme = darkMode ? 'photon-dark' : 'github-light';
+  const utteranceTheme = darkMode ? "photon-dark" : "github-light";
 
   useEffect(() => {
-    const utterances = document.createElement('script');
+    const utterances = document.createElement("script");
     const config = {
       src,
       repo,
       branch,
       theme: utteranceTheme,
-      label: 'comment',
+      label: "comment",
       async: true,
-      crossorigin: 'anonymous',
-      'issue-term': 'pathname',
+      crossorigin: "anonymous",
+      "issue-term": "pathname",
     };
 
     Object.entries(config).forEach(([key, value]) => {
@@ -39,7 +39,7 @@ const Utterances = ({ repo }: Props) => {
     ref.current?.appendChild(utterances);
   }, []);
 
-  return <div className='utterances' ref={ref} />;
+  return <div className="utterances" ref={ref} />;
 };
 
 export default Utterances;

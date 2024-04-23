@@ -1,6 +1,6 @@
-import { useState } from 'react';
+import { useState } from "react";
 
-import { loadPage, savePage } from '~/utils/storage';
+import { loadPage, savePage } from "~/utils/storage";
 
 const initialState = loadPage(1);
 

@@ -1,4 +1,4 @@
-import { graphql, useStaticQuery } from 'gatsby';
+import { graphql, useStaticQuery } from "gatsby";
 
 export const useComment = () =>
   useStaticQuery<GatsbyTypes.CommentQuery>(graphql`

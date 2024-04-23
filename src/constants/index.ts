@@ -1,3 +1,3 @@
 export enum TAG {
-  ALL = 'All',
+  ALL = "All",
 }
