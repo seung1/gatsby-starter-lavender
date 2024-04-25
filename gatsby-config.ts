@@ -154,6 +154,7 @@ export const plugins = [
   "gatsby-plugin-react-helmet",
   "gatsby-plugin-offline",
   "gatsby-plugin-typegen",
+  "gatsby-plugin-sitemap",
 ];
 
 export { siteMetadata };
