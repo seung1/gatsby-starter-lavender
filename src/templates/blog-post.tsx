@@ -54,7 +54,7 @@ const BlogPostTemplate = ({
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
-        lang="en"
+        lang="ko"
         title={title ?? ""}
         description={description ?? post.excerpt ?? ""}
         meta={meta}

@@ -13,6 +13,11 @@ interface Props {
 const Header = ({ title, resetFilter }: Props) => {
   return (
     <Container>
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-LY5PD0355G"
+      ></script>
+
       <TitleWrapper>
         <Circle />
         <Title>

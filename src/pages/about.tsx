@@ -31,7 +31,7 @@ const AboutPage = ({
   return (
     <Layout location={location} title={siteTitle}>
       <Seo
-        lang="en"
+        lang="ko"
         title={siteMetadata?.title ?? ""}
         description={siteMetadata?.description ?? ""}
         meta={meta}
