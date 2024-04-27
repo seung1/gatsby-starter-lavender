@@ -59,6 +59,7 @@ const BlogPostTemplate = ({
         description={description ?? post.excerpt ?? ""}
         meta={meta}
       />
+
       <Article itemScope itemType="http://schema.org/Article">
         <Header>
           <Title itemProp="headline">{title}</Title>
@@ -78,6 +79,7 @@ const BlogPostTemplate = ({
           <Profile />
         </Footer>
       </Article>
+
       {commentConfig?.utterances && (
         <Utterances repo={commentConfig.utterances} />
       )}

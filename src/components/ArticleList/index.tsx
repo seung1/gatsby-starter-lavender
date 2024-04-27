@@ -1,6 +1,7 @@
 import React, { memo } from "react";
 
 import ArticleListItem from "~/components/ArticleList/Item";
+import ArticleDraftListItem from "~/components/ArticleList/DraftItem";
 
 import { Container } from "./styles";
 
@@ -20,6 +21,18 @@ const ArticleList = ({ posts }: Props) => {
         const slug = post.fields?.slug ?? "";
         const description = post.frontmatter?.description ?? post.excerpt ?? "";
         const thumbnail = post.frontmatter?.thumbnail ?? "";
+        const draft = post.frontmatter?.draft ?? false;
+
+        if (draft)
+          return (
+            <ArticleDraftListItem
+              key={slug}
+              title={title}
+              slug={slug}
+              description={description}
+              thumbnail={thumbnail}
+            />
+          );
 
         return (
           <ArticleListItem

@@ -5,6 +5,7 @@ description: "빠른속도로 발전하는 프론트엔드, 앞으로는 어떤 
 tags: [Article, Frontend]
 # thumbnail: /thumbnails/hello-world.jpg
 order: 101
+draft: true
 ---
 
 ## 유튜브 서비스의 변천사
