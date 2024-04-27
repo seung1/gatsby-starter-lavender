@@ -2,8 +2,13 @@ import { styled } from "~/stitches.config";
 
 export const Article = styled("article", {
   display: "flex",
-  padding: "1.5rem 1rem",
-  marginBottom: "1rem",
+  padding: "1rem 0.5rem",
+  marginBottom: "0.5rem",
+
+  "@md": {
+    padding: "1.5rem 1rem",
+    marginBottom: "1rem",
+  },
 
   ":hover": {
     h2: {

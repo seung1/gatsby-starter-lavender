@@ -2,16 +2,16 @@ import { styled } from "~/stitches.config";
 
 export const Container = styled("header", {
   display: "flex",
-  flexDirection: "column-reverse",
+  // flexDirection: "column-reverse",
   alignItems: "center",
   width: "100%",
   margin: "0 auto",
   padding: "2rem 0",
 
-  "@md": {
-    flexDirection: "row",
-    justifyContent: "space-between",
-  },
+  // "@md": {
+  flexDirection: "row",
+  justifyContent: "space-between",
+  // },
 });
 
 export const TitleWrapper = styled("div", {

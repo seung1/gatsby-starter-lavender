@@ -4,6 +4,7 @@ import React, { memo, PropsWithChildren } from "react";
 
 import { useAuthorProfile } from "~/hooks/useAuthorProfile";
 import { useCheckAboutPage } from "~/hooks/useCheckAboutPage";
+import { useCheckMainPage } from "~/hooks/useCheckMainPage";
 
 import {
   Container,
@@ -43,6 +44,7 @@ interface SocialLink {
 const Profile = () => {
   const siteMetadata = useAuthorProfile().site?.siteMetadata;
   const isAboutPageExists = useCheckAboutPage();
+  const isMainPage = useCheckMainPage();
 
   const author = siteMetadata?.author;
   const description = siteMetadata?.description;
@@ -91,10 +93,16 @@ const Profile = () => {
         <Description>{description}</Description>
 
         <ExternalLinks>
-          {isAboutPageExists && (
+          {!isMainPage ? (
             <LinkItem>
-              <Link to={"/about"}>About</Link>
+              <Link to={"/"}>Main</Link>
             </LinkItem>
+          ) : (
+            isAboutPageExists && (
+              <LinkItem>
+                <Link to={"/about"}>About</Link>
+              </LinkItem>
+            )
           )}
           {Object.entries(social ?? {}).map(([key, username]) => {
             const serviceName = key as keyof GatsbyTypes.Social;

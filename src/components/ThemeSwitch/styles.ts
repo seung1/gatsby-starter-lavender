@@ -4,7 +4,7 @@ export const Container = styled("div", {
   position: "relative",
 
   display: "inline-block",
-  alignSelf: "flex-end",
+  // alignSelf: "flex-end",
 
   cursor: "pointer",
 
@@ -12,9 +12,9 @@ export const Container = styled("div", {
   touchAction: "pan-x",
   "-webkit-tap-highlight-color": "transparent",
 
-  "@md": {
-    alignSelf: "auto",
-  },
+  // "@md": {
+  alignSelf: "auto",
+  // },
 });
 
 export const Checkbox = styled("input", {
