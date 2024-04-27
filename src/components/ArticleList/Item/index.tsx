@@ -12,30 +12,30 @@ interface Props {
 
 const ArticleListItem = ({ slug, title, description, thumbnail }: Props) => (
   <li key={slug}>
-    <Article
-      className="post-list-item"
-      itemScope
-      itemType="http://schema.org/Article"
-    >
-      {thumbnail !== "" ? <Thumbnail src={thumbnail} /> : null}
-      <Content>
-        <Header>
-          <Title>
-            <Link to={slug} itemProp="url">
+    <Link to={slug} itemProp="url">
+      <Article
+        className="post-list-item"
+        itemScope
+        itemType="http://schema.org/Article"
+      >
+        {thumbnail !== "" ? <Thumbnail src={thumbnail} /> : null}
+        <Content>
+          <Header>
+            <Title>
               <span itemProp="headline">{title}</span>
-            </Link>
-          </Title>
-        </Header>
-        <Section>
-          <p
-            dangerouslySetInnerHTML={{
-              __html: description,
-            }}
-            itemProp="description"
-          />
-        </Section>
-      </Content>
-    </Article>
+            </Title>
+          </Header>
+          <Section>
+            <p
+              dangerouslySetInnerHTML={{
+                __html: description,
+              }}
+              itemProp="description"
+            />
+          </Section>
+        </Content>
+      </Article>
+    </Link>
   </li>
 );
 

@@ -2,6 +2,14 @@ import { styled } from "~/stitches.config";
 
 export const Article = styled("article", {
   display: "flex",
+  padding: "1.5rem 1rem",
+  marginBottom: "1rem",
+
+  ":hover": {
+    h2: {
+      color: "$primary300",
+    },
+  },
 });
 
 export const Content = styled("div", {});
@@ -21,8 +29,6 @@ export const Title = styled("h2", {
 });
 
 export const Section = styled("section", {
-  marginBottom: "3rem",
-
   color: "$text200",
 
   transition: "color $transitionDuration $transitionTiming",

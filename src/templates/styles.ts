@@ -71,8 +71,9 @@ export const Content = styled("section", {
       borderBottom: "none",
     },
   },
+
   h2: {
-    marginTop: "1.5rem",
+    marginTop: "3rem",
     marginBottom: "1rem",
     paddingBottom: "0.25rem",
     borderBottom: "1px solid $borderGray",
@@ -81,6 +82,15 @@ export const Content = styled("section", {
       borderBottom: "none",
     },
   },
+
+  h3: {
+    marginTop: "2rem",
+  },
+
+  ul: {
+    lineHeight: 1.3,
+  },
+
   a: {
     borderBottom: "1px solid $borderPrimary",
 
@@ -89,14 +99,16 @@ export const Content = styled("section", {
     transition:
       "color $transitionDuration $transitionTiming, border-bottom-color $transitionDuration $transitionTiming",
 
-    // 이미지를 감싸고있는 a태그에 대한 스타일 적용
+    // 컨텐트안에 이미지를 감싸고있는 a태그에 대한 스타일 적용
     "&.gatsby-resp-image-link": {
       borderBottom: "none",
       overflow: "hidden",
       borderRadius: "1rem",
-      margin: "1rem auto",
+      marginTop: "2rem",
+      marginBottom: "1rem",
     },
   },
+
   pre: {
     code: {
       wordBreak: "break-all",

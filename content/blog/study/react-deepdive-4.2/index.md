@@ -7,8 +7,6 @@ tags: [React, Study]
 # order: 2
 ---
 
-<br/>
-
 ## 리액트에서 제공하는 서버에서 렌더링하는 API
 
 `react-dom/server.js` 에서 제공한다.
@@ -66,8 +64,6 @@ export function resumeToPipeableStream() {
 }
 ```
 
-<br/>
-
 ## <span style="color:orange">renderToString</span>
 
 인수로 넘겨받은 리액트 컴포넌트를 렌더링해 HTML 문자열로 반환하는 함수
@@ -124,8 +120,6 @@ const result = ReactDOMServer.renderToString(
 </div>
 ```
 
-<br/>
-
 ### 1. useEffect와 같은 훅이나 handleClick과 같은 이벤트 핸들러는 결과물에 포함되지 않았다.
 
 인수로 주어진 리액트 컴포넌트(<SampleComponent />)를 기준으로 빠르게 브라우저가 렌더링할 수 있는 HTML을 제공하는데 목적이 있는 함수
@@ -136,21 +130,15 @@ const result = ReactDOMServer.renderToString(
 
 SEO에서도 유리
 
-<br/>
-
 ### 2. 단순히 빠르게 그려주는 게 목적이다
 
 사용자는 완성된 HTML을 빠르게 볼 수는 있지만 useEffect나 이벤트 핸들러는 포함되어 있지 않으므로 사용자와 인터렉션을 바로 할 수 있는 상태는 아니다.
-
-<br/>
 
 ### 3. 리액트 컴포넌트를 식별한다
 
 data-reactroot 속성을 통해 리액트 컴포넌트의 루트 엘리먼트가 무엇인지 식별한다
 
 이는 다음에 나올 renderToStaticMarkup과 구별되는 특징이다.
-
-<br/>
 
 ## <span style="color:orange">renderToStaticMarkup</span>
 
@@ -181,15 +169,11 @@ const result = ReactDOMServer.renderToStaticMarkup(
 </div>
 ```
 
-<br/>
-
 ### 1. 이 함수를 사용하여 렌더링하게 될경우 브라우저 API를 절대로 실행할 수 없다.
 
 리액트에서 제공하는 useEffect나 브라우저API를 실행할 수 없다.
 
 결과물은 `hydrate`를 수행하지 않는다는 가정하에 순수한 HTML만 반환하기 때문이다.
-
-<br/>
 
 ### 2. 리액트의 이벤트 리스너가 필요없는 순수한 HTML을 만들때만 사용한다
 
@@ -197,17 +181,11 @@ const result = ReactDOMServer.renderToStaticMarkup(
 
 블로그 글이나 상품의 약관 정보같이 아무런 브라우저 액션이 없는 정적인 내용만 필요한 경우에 유용하다.
 
-<br/>
-
 ## <span style="color:orange">renderToNodeStream</span>
-
-<br/>
 
 ### 1. 브라우저에서 사용하는 것이 완전히 불가능
 
 Nodejs 환경에서 사용해야한다.
-
-<br/>
 
 ### 2. 결과물은 Nodejs의 ReadableStream 이다.
 
@@ -220,15 +198,11 @@ Nodejs 환경에서 사용해야한다.
 - 응답으로 오는 HTML이 여러 청크로 분리돼 내려온다.
 - 대부분의 얼리 알려진 리액트 서버사이드 렌더링 프레임워크는 모두 renderToString 대신 renderToNodeStream을 채택하고 있다.
 
-<br/>
-
 ## <span style="color:orange">renderToStaticNodeStream</span>
 
 renderToString과 renderToStaticMarkup의 차이처럼 리액트 자바스크립트에 필요한 리액트 속성이 제공되지 않는다.
 
 따라서 순수 HTML결과물이 필요할때 사용한다.
-
-<br/>
 
 ## <span style="color:orange">hydrate 란?</span>
 
@@ -237,8 +211,6 @@ renderToString과 renderToNodeStream으로 생성된 HTML 콘텐츠에 자바스
 renderToString의 결과물은 단순히 서버에서 렌더링한 결과물로 사용자에게 무언가 보여줄 수 있지만 사용자가 페이지와 인터렉션을 하는 것은 불가능하다.
 
 이때 hydrate가 정적으로 생산된 HTML에 이벤트와 핸들러를 붙여 완전한 웹페이지 결과물을 만든다.
-
-<br/>
 
 ### VS render
 
@@ -255,8 +227,6 @@ render 함수는 컴포넌트와 HTML의 요소를 인자로 받는다.
 
 HTML 요소에 해당 컴포넌트를 <span style="color:orange">**렌더링**</span>하며 <span style="color:orange">**이벤트 핸들러를 붙이는 작업**</span>까지 모두 한번에 수행한다.
 
-<br/>
-
 ### hydrate
 
 ```jsx
@@ -272,8 +242,6 @@ ReactDOM.hydrate(<App />, element);
 hydrate는 이미 렌더링된 HTML이 있다는 가정하에 작업이 수행된다.
 
 따라서 <span style="color:orange">**이벤트를 붙이는 작업만**</span> 실행한다.
-
-<br/>
 
 ### ! 만약 hydrate에 리액트 관련정보가 없는, renderToStaticMarkup등으로 생성된 HTML을 넘겨주면?
 
@@ -295,8 +263,6 @@ hydrate는 이미 렌더링된 HTML이 있다는 가정하에 작업이 수행�
 
 → 문제2 : 서버에서 빠르게 렌더링해서 보여주는 서버사이드 렌더링의 장점을 포기하는 것
 
-<br/>
-
 ### ! 그렇다면? 호출할때마다 달라지는 api의 경우, 계속 불일치한다고 판단하는가?
 
 이 부분에서는 프레임워크마다 문제를 해결하는 방식이 다르다.
@@ -304,8 +270,6 @@ hydrate는 이미 렌더링된 HTML이 있다는 가정하에 작업이 수행�
 Nextjs의 경우 getServerSideProps라는 예약함수에서 한번만 호출한다.
 
 그리고 이 결과를 HTML에 포함시킨다.
-
-<br/>
 
 ### 불가피한 경우
 
@@ -323,13 +287,9 @@ Nextjs의 경우 getServerSideProps라는 예약함수에서 한번만 호출한
 
 권장하지 않는 방법이며, useEffect등을 통해 클라이언트 로직상 변경하는 것이 좋다.
 
-<br/>
-
 ### 리액트의 서버사이드 렌더링 방식은 프레임워크를 이용할것
 
 리액트 팀 또한 리액트 서버사이드 렌더링을 직접 구현해 사용하기보다는 Nextjs와 같은 프레임워크 사용을 권장
-
-<br/>
 
 ## <span style="color:orange">정리</span>
 

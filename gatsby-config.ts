@@ -155,6 +155,55 @@ export const plugins = [
   "gatsby-plugin-offline",
   "gatsby-plugin-typegen",
   "gatsby-plugin-sitemap",
+  // 서치콘솔에서 입력이 되는걸로 보아 일단 보류
+  // {
+  //   resolve: "gatsby-plugin-sitemap",
+  //   options: {
+  //     query: `
+  //     {
+  //       allSitePage {
+  //         nodes {
+  //           path
+  //         }
+  //       }
+  //       allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
+  //         nodes {
+  //           ... on WpPost {
+  //             uri
+  //             modifiedGmt
+  //           }
+  //           ... on WpPage {
+  //             uri
+  //             modifiedGmt
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `,
+  //     resolveSiteUrl: () => siteMetadata.siteUrl,
+  //     resolvePages: ({
+  //       allSitePage: { nodes: allPages },
+  //       allWpContentNode: { nodes: allWpNodes },
+  //     }) => {
+  //       const wpNodeMap = allWpNodes.reduce((acc, node) => {
+  //         const { uri } = node;
+  //         acc[uri] = node;
+
+  //         return acc;
+  //       }, {});
+
+  //       return allPages.map((page) => {
+  //         return { ...page, ...wpNodeMap[page.path] };
+  //       });
+  //     },
+  //     serialize: ({ path, modifiedGmt }) => {
+  //       return {
+  //         url: path,
+  //         lastmod: modifiedGmt,
+  //       };
+  //     },
+  //   },
+  // },
 ];
 
 export { siteMetadata };

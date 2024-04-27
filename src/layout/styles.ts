@@ -79,11 +79,12 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       paddingTop: "0.75rem",
       paddingBottom: "0.75rem",
     },
+    // 글 스타일 수정
     p: {
-      marginTop: "0.75rem",
-      marginBottom: "0.75rem",
+      marginTop: "0.5rem",
+      marginBottom: "0.5rem",
 
-      lineHeight: 1.625,
+      lineHeight: 1.5,
 
       '> code[class*="language-"]': {
         whiteSpace: "pre-wrap",
@@ -113,8 +114,9 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
         },
       },
 
+      // 코드 박스에 스타일 적용
       'pre[class^="language-"]': {
-        borderRadius: "0.25rem",
+        borderRadius: "0.5rem",
       },
     },
     ':not(pre) > code[class*="language-"]': {
