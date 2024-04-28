@@ -4,6 +4,7 @@ export const Article = styled("article", {
   display: "flex",
   padding: "1rem 0.5rem",
   marginBottom: "0.5rem",
+  opacity: 0.5,
 
   "@md": {
     padding: "1.5rem 1rem",

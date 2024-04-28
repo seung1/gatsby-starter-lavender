@@ -1,7 +1,15 @@
 import { Link } from "gatsby";
 import React, { memo } from "react";
 
-import { Article, Content, Header, Section, Thumbnail, Title } from "./styles";
+import {
+  ArticleCard,
+  Article,
+  Content,
+  Header,
+  Section,
+  Thumbnail,
+  Title,
+} from "./styles";
 
 interface Props {
   slug: string;
@@ -11,7 +19,7 @@ interface Props {
 }
 
 const ArticleListItem = ({ slug, title, description, thumbnail }: Props) => (
-  <li key={slug}>
+  <ArticleCard key={slug}>
     <Link to={slug} itemProp="url">
       <Article
         className="post-list-item"
@@ -36,7 +44,7 @@ const ArticleListItem = ({ slug, title, description, thumbnail }: Props) => (
         </Content>
       </Article>
     </Link>
-  </li>
+  </ArticleCard>
 );
 
 export default memo(ArticleListItem);

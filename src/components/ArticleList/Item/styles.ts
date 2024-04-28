@@ -1,19 +1,35 @@
 import { styled } from "~/stitches.config";
 
+export const ArticleCard = styled("li", {
+  borderRadius: "1rem",
+  transition: ".3s",
+
+  "@md": {
+    "&:hover": {
+      transform: "translateY(-0.5rem)",
+      boxShadow:
+        "rgba(0, 0, 33, 0.07) 0px 16px 22.4px 4.8px,rgba(0, 0, 33, 0.05) 0px 3.2px 16px 0px,rgba(0, 0, 33, 0.07) 0px 0px 1px 0px",
+      h2: {
+        color: "$primary300",
+      },
+    },
+  },
+
+  ":active.post-list-item": {
+    transform: "scale(0.95)",
+    borderRadius: 2,
+    transition: "transform .3s",
+  },
+});
+
 export const Article = styled("article", {
   display: "flex",
-  padding: "1rem 0.5rem",
+  padding: "1rem 1rem",
   marginBottom: "0.5rem",
 
   "@md": {
-    padding: "1.5rem 1rem",
+    padding: "1.5rem 1.5rem",
     marginBottom: "1rem",
-  },
-
-  ":hover": {
-    h2: {
-      color: "$primary300",
-    },
   },
 });
 
@@ -25,6 +41,7 @@ export const Header = styled("header", {
 
 export const Title = styled("h2", {
   fontSize: "1.5rem",
+  transition: ".3s",
 
   a: {
     color: "$text500",

@@ -25,7 +25,7 @@ const ArticleDraftListItem = ({
       <Content>
         <Header>
           <Title>
-            <span itemProp="headline">{title}</span>
+            <span itemProp="headline">/* {title} */</span>
           </Title>
         </Header>
         <Section>

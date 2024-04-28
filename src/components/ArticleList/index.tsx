@@ -9,33 +9,22 @@ interface Props {
   posts: GatsbyTypes.BlogIndexQuery["allMarkdownRemark"]["nodes"];
 }
 
-const ArticleList = ({ posts }: Props) => {
-  return (
-    <Container>
-      {posts.map((post) => {
-        if (post === undefined) {
-          return null;
-        }
+const ArticleList = ({ posts }: Props) => (
+  <Container>
+    {posts.map((post) => {
+      if (post === undefined) {
+        return null;
+      }
 
-        const title = post.frontmatter?.title ?? post.fields?.slug ?? "";
-        const slug = post.fields?.slug ?? "";
-        const description = post.frontmatter?.description ?? post.excerpt ?? "";
-        const thumbnail = post.frontmatter?.thumbnail ?? "";
-        const draft = post.frontmatter?.draft ?? false;
+      const title = post.frontmatter?.title ?? post.fields?.slug ?? "";
+      const slug = post.fields?.slug ?? "";
+      const description = post.frontmatter?.description ?? post.excerpt ?? "";
+      const thumbnail = post.frontmatter?.thumbnail ?? "";
+      const draft = post.frontmatter?.draft ?? false;
 
-        if (draft)
-          return (
-            <ArticleDraftListItem
-              key={slug}
-              title={title}
-              slug={slug}
-              description={description}
-              thumbnail={thumbnail}
-            />
-          );
-
+      if (draft)
         return (
-          <ArticleListItem
+          <ArticleDraftListItem
             key={slug}
             title={title}
             slug={slug}
@@ -43,9 +32,18 @@ const ArticleList = ({ posts }: Props) => {
             thumbnail={thumbnail}
           />
         );
-      })}
-    </Container>
-  );
-};
+
+      return (
+        <ArticleListItem
+          key={slug}
+          title={title}
+          slug={slug}
+          description={description}
+          thumbnail={thumbnail}
+        />
+      );
+    })}
+  </Container>
+);
 
 export default memo(ArticleList);
