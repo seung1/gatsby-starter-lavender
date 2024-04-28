@@ -134,7 +134,7 @@ export const plugins = [
             }
           `,
           output: "/rss.xml",
-          title: "Gatsby Starter Lavendar RSS Feed",
+          title: "seung1 blog",
         },
       ],
     },
