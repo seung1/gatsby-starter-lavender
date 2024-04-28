@@ -3,6 +3,7 @@ import { PageProps, graphql } from "gatsby";
 import React from "react";
 
 import ArticleNavigator from "~/components/ArticleNavigator";
+import FloatingActionButton from "~/components/FloatingActionButton";
 import Profile from "~/components/Profile";
 import Seo from "~/components/Seo";
 import Tags from "~/components/Tags";
@@ -68,9 +69,11 @@ const BlogPostTemplate = ({
             <Tags tags={tags as string[]} />
           </ArticleMetadata>
         </Header>
+
         <TableOfContents
           dangerouslySetInnerHTML={{ __html: post.tableOfContents ?? "" }}
         />
+
         <Content
           dangerouslySetInnerHTML={{ __html: post.html ?? "" }}
           itemProp="articleBody"
@@ -83,13 +86,17 @@ const BlogPostTemplate = ({
       {commentConfig?.utterances && (
         <Utterances repo={commentConfig.utterances} />
       )}
+
       {commentConfig?.disqusShortName && (
         <DiscussionEmbed
           shortname={commentConfig?.disqusShortName}
           config={disqusConfig}
         />
       )}
+
       <ArticleNavigator previousArticle={previous} nextArticle={next} />
+
+      <FloatingActionButton />
     </Layout>
   );
 };
