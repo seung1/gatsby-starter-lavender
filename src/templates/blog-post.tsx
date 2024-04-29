@@ -5,6 +5,7 @@ import React from "react";
 import ArticleNavigator from "~/components/ArticleNavigator";
 import FloatingActionButton from "~/components/FloatingActionButton";
 import Profile from "~/components/Profile";
+import ScorllProgressBar from "~/components/ScorllProgressBar";
 import Seo from "~/components/Seo";
 import Tags from "~/components/Tags";
 import Utterances from "~/components/Utterances";
@@ -60,6 +61,8 @@ const BlogPostTemplate = ({
         description={description ?? post.excerpt ?? ""}
         meta={meta}
       />
+
+      <ScorllProgressBar />
 
       <Article itemScope itemType="http://schema.org/Article">
         <Header>
