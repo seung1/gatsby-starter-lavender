@@ -3,6 +3,7 @@ import { styled } from "~/stitches.config";
 export const ArticleCard = styled("li", {
   borderRadius: "1rem",
   transition: ".3s",
+  position: "relative",
 
   "@md": {
     "&:hover": {
@@ -24,16 +25,39 @@ export const ArticleCard = styled("li", {
 
 export const Article = styled("article", {
   display: "flex",
-  padding: "1rem 1rem",
+  flexDirection: "row",
+  gap: "1.5rem",
+  padding: "1rem",
   marginBottom: "0.5rem",
 
   "@md": {
-    padding: "1.5rem 1.5rem",
+    gap: "1rem",
+    padding: "1.5rem",
     marginBottom: "1rem",
   },
 });
 
 export const Content = styled("div", {});
+
+export const Front = styled("span", {
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  gap: "0.5rem",
+  color: "$text200",
+
+  "@md": {
+    margin: "0 1rem",
+  },
+});
+
+export const Category = styled("span", {
+  fontSize: "1.4rem",
+});
+
+export const Date = styled("span", {
+  fontSize: "1.3rem",
+});
 
 export const Header = styled("header", {
   margin: "0rem auto 1rem",
@@ -58,6 +82,7 @@ export const Section = styled("section", {
 
 export const Thumbnail = styled("img", {
   borderRadius: "0.5rem",
+  objectFit: "cover",
 
   width: "6rem",
   height: "6rem",

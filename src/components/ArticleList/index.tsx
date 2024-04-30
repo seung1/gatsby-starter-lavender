@@ -21,6 +21,8 @@ const ArticleList = ({ posts }: Props) => (
       const description = post.frontmatter?.description ?? post.excerpt ?? "";
       const thumbnail = post.frontmatter?.thumbnail ?? "";
       const draft = post.frontmatter?.draft ?? false;
+      const date = post.frontmatter?.date ?? "";
+      const tags = post.frontmatter?.tags ?? [];
 
       if (draft)
         return (
@@ -37,6 +39,8 @@ const ArticleList = ({ posts }: Props) => (
         <ArticleListItem
           key={slug}
           title={title}
+          date={date}
+          tags={tags as string[]}
           slug={slug}
           description={description}
           thumbnail={thumbnail}

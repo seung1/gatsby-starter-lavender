@@ -1,10 +1,10 @@
 ---
 title: 좌충우돌 프론트엔드 기술블로그 시작기
-date: 2024-04-21
+date: "2024-04-21"
 description: "커스텀하고 싶은 부분이 너무 많은 블로그!"
-tags: [Article, Blog]
+tags: [Article]
 # thumbnail: /thumbnails/hello-world.jpg
-order: 100
+# order: 100
 ---
 
 ## 블로그를 드디어 시작했다

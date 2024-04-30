@@ -29,6 +29,7 @@ const BlogIndex = ({
   const siteUrl = data.site?.siteMetadata?.siteUrl ?? "";
   const siteTitle = data.site?.siteMetadata?.title ?? "";
   const siteThumbnail = data.site?.siteMetadata?.thumbnail;
+
   const posts = filterPostsByTag(
     filterPostsByTitle(data.allMarkdownRemark.nodes, titleFilter),
     currentTag
@@ -111,7 +112,7 @@ export const pageQuery = graphql`
         thumbnail
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___order], order: DESC }) {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       nodes {
         excerpt
         fields {
@@ -123,6 +124,7 @@ export const pageQuery = graphql`
           tags
           thumbnail
           draft
+          date
         }
       }
     }
