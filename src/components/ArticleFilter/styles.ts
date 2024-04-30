@@ -2,11 +2,18 @@ import { styled } from "~/stitches.config";
 
 export const Container = styled("section", {
   display: "flex",
-  gap: "1rem",
-  margin: "2rem auto",
-  padding: "0.5rem 1rem",
+  gap: "2rem",
+  marginBottom: "1rem",
+  // padding: "0.5rem 1rem",
 
-  // borderLeft: "0.25rem solid $borderPrimary",
+  padding: "0.75rem",
+
+  "@md": {
+    gap: "1.5rem",
+    padding: "1.25rem",
+  },
+
+  borderLeft: "0.25rem solid $borderPrimary",
 
   transition: "border-left-color $transitionDuration $transitionTiming",
 });
@@ -15,13 +22,13 @@ export const Title = styled("h3", {
   display: "block",
   lineHeight: "2.5rem",
   color: "$primary300",
-  width: "4rem",
+  width: "3rem",
   textAlign: "center",
 
   transition: "color $transitionDuration $transitionTiming",
 
   "@md": {
-    width: "5.5rem",
+    margin: "0rem 0.5rem",
   },
 });
 

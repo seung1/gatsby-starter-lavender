@@ -2,13 +2,13 @@ import { styled } from "~/stitches.config";
 
 export const Article = styled("article", {
   display: "flex",
-  gap: "1.5rem",
+  gap: "2rem",
   padding: "1rem",
   marginBottom: "0.5rem",
   opacity: 0.5,
 
   "@md": {
-    gap: "1rem",
+    gap: "1.5rem",
     padding: "1.5rem",
     marginBottom: "1rem",
   },
@@ -21,21 +21,24 @@ export const Front = styled("span", {
   flexDirection: "column",
   alignItems: "center",
   gap: "0.5rem",
-  maxWidth: "3.5rem",
-  minWidth: "3.5rem",
+  maxWidth: "3rem",
+  minWidth: "3rem",
   color: "$text200",
+  fontStyle: "italic",
 
   "@md": {
-    margin: "0 1rem 0 0.5rem",
+    margin: "0rem 0.5rem",
   },
 });
 
 export const Category = styled("span", {
-  fontSize: "1.4rem",
+  fontSize: "1.3rem",
+  lineHeight: 1.5,
+  fontWeight: 600,
 });
 
 export const Date = styled("span", {
-  fontSize: "1.3rem",
+  fontSize: "1.1rem",
 });
 
 export const Header = styled("header", {
@@ -52,7 +55,7 @@ export const Section = styled("section", {
   ">h4": {
     margin: "0.5rem auto",
     fontWeight: 600,
-    // lineHeight: 1.5,
+    lineHeight: 1.5,
   },
 });
 
