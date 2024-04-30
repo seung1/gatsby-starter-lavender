@@ -25,7 +25,6 @@ export const ArticleCard = styled("li", {
 
 export const Article = styled("article", {
   display: "flex",
-  flexDirection: "row",
   gap: "1.5rem",
   padding: "1rem",
   marginBottom: "0.5rem",
@@ -44,10 +43,12 @@ export const Front = styled("span", {
   flexDirection: "column",
   alignItems: "center",
   gap: "0.5rem",
+  maxWidth: "3.5rem",
+  minWidth: "3.5rem",
   color: "$text200",
 
   "@md": {
-    margin: "0 1rem",
+    margin: "0 1rem 0 0.5rem",
   },
 });
 
@@ -78,6 +79,12 @@ export const Section = styled("section", {
   color: "$text200",
 
   transition: "color $transitionDuration $transitionTiming",
+
+  ">h4": {
+    margin: "0.5rem auto",
+    fontWeight: 600,
+    // lineHeight: 1.5,
+  },
 });
 
 export const Thumbnail = styled("img", {

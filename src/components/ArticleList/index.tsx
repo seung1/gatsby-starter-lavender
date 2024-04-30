@@ -29,6 +29,7 @@ const ArticleList = ({ posts }: Props) => (
           <ArticleDraftListItem
             key={slug}
             title={title}
+            tags={tags as string[]}
             slug={slug}
             description={description}
             thumbnail={thumbnail}

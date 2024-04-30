@@ -2,7 +2,7 @@
 title: 좌충우돌 프론트엔드 기술블로그 시작기
 date: "2024-04-21"
 description: "커스텀하고 싶은 부분이 너무 많은 블로그!"
-tags: [Article]
+tags: [Ticle]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 100
 ---
@@ -27,13 +27,13 @@ tags: [Article]
 
 그러던중 [오종택 개발자님의 기술블로그](https://saengmotmi.netlify.app/)를 보게되었고 생각보다 깔끔하고 정말 필요한 기능만 갖추고 있었다.
 
-어떻게 구현하셨을까 깃허브에 들어가보았는데 [탬플릿](https://github.com/blurfx/gatsby-starter-lavender)을 이용하셨다는 사실을 알게되었다.
+어떻게 구현하셨을까 깃허브에 들어가보았는데 [탬플릿](https://gatsby-starter-lavender.vercel.app)을 이용하셨다는 사실을 알게되었다.
 
 <img src="./gatsby-starter-lavender.png" width="100px"/>
 
 이미 잘만들어져 있는 탬플릿에 내가 원하는 커스텀만 살짝 첨가해서 진짜 내 블로그를 만들면 좋겠다 싶었다.
 
-다 만들고나서 알게된 사실은, 저 탬플릿을 개발하신 분께서 [다른 탬플릿](https://github.com/blurfx/ambienxo)도 만드셔서 여러개 중에서 선택할 수 있었는데 살짝 아쉽다.
+다 만들고나서 알게된 사실은, 저 탬플릿을 개발하신 분께서 [다른 탬플릿](https://ambienxo.vercel.app)도 만드셔서 여러개 중에서 선택할 수 있었는데 살짝 아쉽다.
 
 <img src="./ambienxo.png" width="100" height="100" />
 

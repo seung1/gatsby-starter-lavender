@@ -1,8 +1,8 @@
 ---
-title: 프론트엔드에서 사용자에게 제공해줄수 있는 가치 (작성중)
+title: 프론트엔드에서 사용자에게 제공해줄수 있는 가치
 date: "2024-04-21"
 description: "빠른속도로 발전하는 프론트엔드, 앞으로는 어떤 가치를 사용자에게 제공해 줄 수 있을까"
-tags: [Article]
+tags: [Ticle]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 101
 draft: true

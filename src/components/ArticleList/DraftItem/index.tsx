@@ -1,10 +1,21 @@
 import React, { memo } from "react";
 
-import { Article, Content, Header, Section, Thumbnail, Title } from "./styles";
+import {
+  Article,
+  Category,
+  Content,
+  Date,
+  Front,
+  Header,
+  Section,
+  Thumbnail,
+  Title,
+} from "./styles";
 
 interface Props {
   slug: string;
   title: string;
+  tags: string[];
   description: string;
   thumbnail: string;
 }
@@ -12,6 +23,7 @@ interface Props {
 const ArticleDraftListItem = ({
   slug,
   title,
+  tags,
   description,
   thumbnail,
 }: Props) => (
@@ -21,7 +33,12 @@ const ArticleDraftListItem = ({
       itemScope
       itemType="http://schema.org/Article"
     >
+      <Front>
+        <Category>{tags[0]}</Category>
+        <Date>작성중</Date>
+      </Front>
       {thumbnail !== "" ? <Thumbnail src={thumbnail} /> : null}
+
       <Content>
         <Header>
           <Title>
@@ -29,7 +46,7 @@ const ArticleDraftListItem = ({
           </Title>
         </Header>
         <Section>
-          <p
+          <h4
             dangerouslySetInnerHTML={{
               __html: description,
             }}

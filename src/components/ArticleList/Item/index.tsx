@@ -56,7 +56,7 @@ const ArticleListItem = ({
               </Title>
             </Header>
             <Section>
-              <p
+              <h4
                 dangerouslySetInnerHTML={{
                   __html: description,
                 }}

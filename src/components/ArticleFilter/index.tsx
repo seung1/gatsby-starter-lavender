@@ -7,7 +7,14 @@ import React, {
 
 import { TAG } from "~/constants";
 
-import { Container, Title, TagListWrapper, Tag, Input } from "./styles";
+import {
+  Container,
+  InputWrapper,
+  Title,
+  TagListWrapper,
+  Tag,
+  Input,
+} from "./styles";
 
 interface Props {
   tags: string[];
@@ -36,33 +43,35 @@ const ArticleFilter = ({
   return (
     <Container>
       <Title>Filter</Title>
-      <Input
-        type="text"
-        placeholder="Article name.."
-        value={titleFilter}
-        onChange={onTitleFilterChange}
-      />
-      <TagListWrapper>
-        <Tag
-          type="button"
-          data-tag={TAG.ALL}
-          onClick={onClickTag}
-          filtered={currentTag === TAG.ALL}
-        >
-          {TAG.ALL}
-        </Tag>
-        {tags.map((tag) => (
+      <InputWrapper>
+        <Input
+          type="text"
+          placeholder="Article name.."
+          value={titleFilter}
+          onChange={onTitleFilterChange}
+        />
+        <TagListWrapper>
           <Tag
             type="button"
-            key={tag}
-            data-tag={tag}
+            data-tag={TAG.ALL}
             onClick={onClickTag}
-            filtered={currentTag === tag}
+            filtered={currentTag === TAG.ALL}
           >
-            {tag}
+            {TAG.ALL}
           </Tag>
-        ))}
-      </TagListWrapper>
+          {tags.map((tag) => (
+            <Tag
+              type="button"
+              key={tag}
+              data-tag={tag}
+              onClick={onClickTag}
+              filtered={currentTag === tag}
+            >
+              {tag}
+            </Tag>
+          ))}
+        </TagListWrapper>
+      </InputWrapper>
     </Container>
   );
 };
