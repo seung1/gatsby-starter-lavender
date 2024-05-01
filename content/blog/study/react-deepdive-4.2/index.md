@@ -1,5 +1,5 @@
 ---
-title: "[React study] 서버사이드 렌더링을 위한 리액트 API 살펴보기"
+title: "[React] 서버사이드 렌더링을 위한 리액트 API 살펴보기"
 date: "2024-04-24"
 description: "모던 리액트 Deep Dive 4.2"
 tags: [Study]

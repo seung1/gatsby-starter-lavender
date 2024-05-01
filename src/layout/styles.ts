@@ -95,7 +95,9 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       borderLeft: "0.25rem solid $borderPrimary",
       marginBottom: "0.5rem",
     },
-
+    u: {
+      textDecoration: "#816eec wavy underline",
+    },
     del: {
       color: "$text300",
       opacity: 0.5,
