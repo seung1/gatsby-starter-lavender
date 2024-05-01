@@ -12,6 +12,9 @@ export const filterPostsByTitle = (posts: Posts, title: string): Posts => {
 };
 
 export const filterPostsByTag = (posts: Posts, tag: string): Posts => {
+  if (tag === TAG.MAIN) {
+    return posts.filter((post) => !post.frontmatter?.tags?.includes("Ticle"));
+  }
   if (tag === TAG.ALL) {
     return posts;
   }

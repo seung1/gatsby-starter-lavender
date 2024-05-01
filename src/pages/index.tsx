@@ -47,7 +47,7 @@ const BlogIndex = ({
 
   const resetFilter = () => {
     setTitleFilter("");
-    setCurrentTag(TAG.ALL);
+    setCurrentTag(TAG.MAIN);
   };
 
   const meta: Metadata[] = [];

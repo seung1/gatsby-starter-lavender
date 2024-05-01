@@ -53,6 +53,14 @@ const ArticleFilter = ({
         <TagListWrapper>
           <Tag
             type="button"
+            data-tag={TAG.MAIN}
+            onClick={onClickTag}
+            filtered={currentTag === TAG.MAIN}
+          >
+            {TAG.MAIN}
+          </Tag>
+          <Tag
+            type="button"
             data-tag={TAG.ALL}
             onClick={onClickTag}
             filtered={currentTag === TAG.ALL}
