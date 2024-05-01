@@ -93,6 +93,12 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
     blockquote: {
       paddingLeft: "1rem",
       borderLeft: "0.25rem solid $borderPrimary",
+      marginBottom: "0.5rem",
+    },
+
+    del: {
+      color: "$text300",
+      opacity: 0.5,
     },
     article: {
       overflowWrap: "break-word",
