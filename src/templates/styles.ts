@@ -92,6 +92,12 @@ export const Content = styled("section", {
     lineHeight: 1.3,
   },
 
+  blockquote: {
+    color: "$text300",
+    opacity: 0.8,
+    margin: "1rem 0",
+  },
+
   a: {
     borderBottom: "1px solid $borderPrimary",
 

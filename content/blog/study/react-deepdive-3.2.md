@@ -1,6 +1,6 @@
 ---
 title: "[React] 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
-date: "2024-05-03"
+date: "2024-04-17"
 description: "모던 리액트 Deep Dive 3.2"
 tags: [Study]
 # thumbnail: /thumbnails/hello-world.jpg
