@@ -9,7 +9,7 @@ tags: [Study]
 
 ## 리액트에서 제공하는 서버에서 렌더링하는 API
 
-`react-dom/server.js` 에서 제공한다.
+`react-dom/server.js` 에서 총 4가지 함수를 제공한다.
 
 ```jsx
 // 17.0.2
@@ -26,6 +26,8 @@ export {
 ```
 
 책에서 말하는 함수는 예전버전인거 같고 가장 최신 [24.04.24 기준] 18.2.0 버전에서는 살짝 달라졌다.
+
+아래는 실제 facebook/react 프로젝트속 코드이다.
 
 ```jsx
 // 18.2.0
@@ -64,7 +66,7 @@ export function resumeToPipeableStream() {
 }
 ```
 
-## <span style="color:orange">renderToString</span>
+## renderToString
 
 인수로 넘겨받은 리액트 컴포넌트를 렌더링해 HTML 문자열로 반환하는 함수
 
@@ -140,7 +142,7 @@ data-reactroot 속성을 통해 리액트 컴포넌트의 루트 엘리먼트가
 
 이는 다음에 나올 renderToStaticMarkup과 구별되는 특징이다.
 
-## <span style="color:orange">renderToStaticMarkup</span>
+## renderToStaticMarkup
 
 renderToString과 같이 HTML 문자열을 만든다.
 
@@ -181,7 +183,7 @@ const result = ReactDOMServer.renderToStaticMarkup(
 
 블로그 글이나 상품의 약관 정보같이 아무런 브라우저 액션이 없는 정적인 내용만 필요한 경우에 유용하다.
 
-## <span style="color:orange">renderToNodeStream</span>
+## renderToNodeStream
 
 ### 1. 브라우저에서 사용하는 것이 완전히 불가능
 
@@ -198,13 +200,17 @@ Nodejs 환경에서 사용해야한다.
 - 응답으로 오는 HTML이 여러 청크로 분리돼 내려온다.
 - 대부분의 얼리 알려진 리액트 서버사이드 렌더링 프레임워크는 모두 renderToString 대신 renderToNodeStream을 채택하고 있다.
 
-## <span style="color:orange">renderToStaticNodeStream</span>
+## renderToStaticNodeStream
 
 renderToString과 renderToStaticMarkup의 차이처럼 리액트 자바스크립트에 필요한 리액트 속성이 제공되지 않는다.
 
 따라서 순수 HTML결과물이 필요할때 사용한다.
 
-## <span style="color:orange">hydrate 란?</span>
+그리고 renderToNodeStream와 동일하게 여러 청크로 분리되어 전달받는다.
+
+정적사이트이고, 크기가 커서 여러 청크로 분리되어 전달받아야할때 사용한다.
+
+## hydrate 란?
 
 renderToString과 renderToNodeStream으로 생성된 HTML 콘텐츠에 자바스크립트 핸들러나 이벤트를 붙이는 역할을 한다.
 
@@ -291,7 +297,7 @@ Nextjs의 경우 getServerSideProps라는 예약함수에서 한번만 호출한
 
 리액트 팀 또한 리액트 서버사이드 렌더링을 직접 구현해 사용하기보다는 Nextjs와 같은 프레임워크 사용을 권장
 
-## <span style="color:orange">정리</span>
+## 정리
 
 > 1.  리액트에서 제공하는 서버에서 렌더링하는 API 4가지 함수
 >

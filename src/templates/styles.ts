@@ -77,6 +77,7 @@ export const Content = styled("section", {
     marginBottom: "1rem",
     paddingBottom: "0.25rem",
     borderBottom: "1px solid $borderGray",
+    color: "orange",
 
     a: {
       borderBottom: "none",
