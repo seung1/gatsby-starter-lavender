@@ -1,12 +1,19 @@
 import { styled } from "~/stitches.config";
 
 export const Container = styled("li", {
-  border: "1px solid #e1e4e8",
   borderRadius: "1rem",
+  backgroundColor: "transparent",
   overflow: "hidden",
   transition: ".3s",
+  marginTop: "2rem",
   display: "flex",
   alignItems: "center",
+
+  '& .adsbygoogle[data-ad-status="unfilled"]': {
+    ins: { display: "none !important" },
+    display: "none",
+    height: 0,
+  },
 
   "@md": {
     "&:hover": {

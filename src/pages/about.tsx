@@ -38,27 +38,35 @@ const AboutPage = ({
         noSiteName
       />
       <Profile />
+      <h1>/* 작성중 */</h1>
+
+      {/* <br />
+
       <h1>I am</h1>
+      <ul>
+        <li>백석고등학교 졸업</li>
+        <li>중앙대학교 창의ICT공과대학 컴퓨터공학부 졸업</li>
+        <li>볼트마이크로 S/W 개발팀 인턴</li>
+        <li>볼트마이크로 S/W 개발팀 스페셜리스트</li>
+      </ul>
+      <p>들어가야할거 : 기간</p>
+
+      <br />
+
+      <h1>Project</h1>
+      <ul>
+        <li>Used-Action-System</li>
+        <li>Lck Esports Manager</li>
+        <li>일기예복</li>
+        <li>위스키 리뷰</li>
+        <li>FTIsland</li>
+        <li>CameraFi Studio</li>
+        <li>CameraFi Studio Admin</li>
+      </ul>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla neque
-        lectus, varius in vehicula id, viverra eu diam. Duis pellentesque rutrum
-        tincidunt. Nullam bibendum gravida blandit. Maecenas quis enim justo.
-        Sed malesuada lectus mi, sit amet hendrerit nisl consequat sed. Proin
-        semper ex nec nisi egestas gravida. Cras mattis feugiat tempor. Donec
-        sollicitudin est metus, nec posuere mauris dictum at. Praesent laoreet
-        massa pulvinar laoreet dapibus. Sed efficitur lacus eu ligula fermentum,
-        ut sodales justo sagittis. Mauris sit amet vehicula enim.
+        들어가야할거 : 기간, 규모, 간단한 기술스택, 썸네일, 역할, 성과, 문제 및
       </p>
-      <p>
-        In sed gravida libero. Curabitur accumsan massa sed iaculis dictum. Cras
-        est elit, dignissim a convallis ac, condimentum nec justo. Interdum et
-        malesuada fames ac ante ipsum primis in faucibus. Fusce varius elit
-        massa. Donec feugiat mi orci, sit amet viverra libero vestibulum in.
-        Donec tristique elit non finibus fermentum. Fusce vestibulum accumsan
-        elit id euismod. Donec quis nibh lobortis eros consequat elementum id
-        non lacus. Mauris eget velit pellentesque, gravida ipsum ut, varius leo.
-        Donec eget mi et diam euismod elementum a in massa.
-      </p>
+      <p>해결 형식 : 카드형으로 제작하기</p> */}
     </Layout>
   );
 };

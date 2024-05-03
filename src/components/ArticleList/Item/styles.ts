@@ -18,7 +18,6 @@ export const ArticleCard = styled("li", {
 
   ":active.post-list-item": {
     transform: "scale(0.95)",
-    borderRadius: 2,
     transition: "transform .3s",
   },
 });
