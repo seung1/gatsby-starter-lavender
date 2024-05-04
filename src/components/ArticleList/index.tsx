@@ -2,7 +2,7 @@ import React, { memo } from "react";
 
 import ArticleListItem from "~/components/ArticleList/Item";
 import ArticleDraftListItem from "~/components/ArticleList/DraftItem";
-import GoogleAdsList from "~/components/GoogleAdsList";
+// import GoogleAdsList from "~/components/GoogleAdsList";
 
 import { Container } from "./styles";
 
@@ -49,7 +49,7 @@ const ArticleList = ({ posts }: Props) => (
         />
       );
     })}
-    <GoogleAdsList />
+    {/* <GoogleAdsList /> */}
   </Container>
 );
 
