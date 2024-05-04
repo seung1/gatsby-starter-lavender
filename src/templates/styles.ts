@@ -92,6 +92,10 @@ export const Content = styled("section", {
     lineHeight: 1.3,
   },
 
+  ol: {
+    marginTop: "1rem",
+  },
+
   blockquote: {
     color: "$text300",
     opacity: 0.8,
