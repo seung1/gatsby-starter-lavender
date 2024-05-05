@@ -98,7 +98,8 @@ export const Content = styled("section", {
 
   blockquote: {
     color: "$text300",
-    opacity: 0.8,
+    opacity: 0.7,
+    fontWeight: 600,
     margin: "1rem 0",
   },
 
