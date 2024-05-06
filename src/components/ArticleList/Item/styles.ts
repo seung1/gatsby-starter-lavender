@@ -17,7 +17,10 @@ export const ArticleCard = styled("li", {
   },
 
   ":active.post-list-item": {
-    transform: "scale(0.95)",
+    transform: "scale(0.9)",
+    "@md": {
+      transform: "scale(0.95)",
+    },
     transition: "transform .3s",
   },
 });
@@ -27,8 +30,10 @@ export const Article = styled("article", {
   gap: "2rem",
   padding: "1rem",
   marginBottom: "0.5rem",
+  cursor: "default",
 
   "@md": {
+    cursor: "pointer",
     gap: "1.5rem",
     padding: "1.5rem",
     marginBottom: "1rem",

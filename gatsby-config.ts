@@ -45,6 +45,20 @@ export const plugins = [
           },
         },
         {
+          resolve: "gatsby-remark-video",
+          options: {
+            width: "auto",
+            height: "100%",
+            maxHeight: "25rem",
+            preload: "auto",
+            muted: true,
+            autoplay: true,
+            playsinline: true,
+            controls: false,
+            loop: true,
+          },
+        },
+        {
           resolve: "gatsby-remark-responsive-iframe",
           options: {
             wrapperStyle: "margin-bottom: 1.0725rem",
@@ -63,6 +77,11 @@ export const plugins = [
             strict: "ignore",
           },
         },
+        // 마크다운에서 커스텀한 것들 목록을 여기에 추가하기
+        // {
+        //   resolve: "gatsby-remark-component",
+        //   options: { components: ["custom-box"] },
+        // },
         "gatsby-remark-external-links",
         "gatsby-remark-prismjs",
         "gatsby-remark-copy-linked-files",

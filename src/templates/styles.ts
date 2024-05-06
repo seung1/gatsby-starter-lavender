@@ -103,6 +103,16 @@ export const Content = styled("section", {
     margin: "1rem 0",
   },
 
+  video: {
+    marginTop: "1rem",
+    width: "100%",
+    height: "100%",
+    maxHeight: "25rem",
+    borderRadius: "1rem",
+    border: "3px solid $primary300",
+    backgroundColor: "black",
+  },
+
   a: {
     borderBottom: "1px solid $borderPrimary",
 
@@ -118,6 +128,14 @@ export const Content = styled("section", {
       borderRadius: "1rem",
       marginTop: "2rem",
       marginBottom: "1rem",
+      maxHeight: "25rem",
+    },
+
+    img: {
+      // border: "5px solid $primary300",
+      width: "auto !important",
+      left: "50% !important",
+      transform: "translateX(-50%)",
     },
   },
 
