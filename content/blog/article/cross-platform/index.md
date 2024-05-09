@@ -4,7 +4,6 @@ date: "2024-05-06"
 description: "모바일에서는 터치가 있구요 PC는 호버가 있습니다."
 tags: [Article]
 # thumbnail: ./cross-platform-2.png
-# order: 101
 ---
 
 ## PC와 모바일 웹은 같은 웹 개발이 아니었다
