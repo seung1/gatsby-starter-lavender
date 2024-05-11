@@ -3,7 +3,7 @@ import { styled } from "~/stitches.config";
 export const Article = styled("article", {
   display: "flex",
   flexDirection: "column",
-  padding: "1rem",
+  padding: "1rem 0",
   marginBottom: "0.5rem",
   opacity: 0.5,
 
