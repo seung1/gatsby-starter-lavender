@@ -31,7 +31,6 @@ const ArticleList = ({ posts }: Props) => (
             key={slug}
             title={title}
             tags={tags as string[]}
-            slug={slug}
             description={description}
             thumbnail={thumbnail}
           />

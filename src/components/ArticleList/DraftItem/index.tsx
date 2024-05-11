@@ -13,7 +13,6 @@ import {
 } from "./styles";
 
 interface Props {
-  slug: string;
   title: string;
   tags: string[];
   description: string;
@@ -21,13 +20,12 @@ interface Props {
 }
 
 const ArticleDraftListItem = ({
-  slug,
   title,
   tags,
   description,
   thumbnail,
 }: Props) => (
-  <li key={slug}>
+  <li key={title}>
     <Article
       className="post-list-draft-item"
       itemScope

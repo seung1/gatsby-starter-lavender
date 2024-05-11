@@ -35,7 +35,7 @@ export const Name = styled("p", {
 });
 
 export const Description = styled("p", {
-  lineHeight: 1.2,
+  lineHeight: 1.5,
   wordBreak: "keep-all",
 });
 

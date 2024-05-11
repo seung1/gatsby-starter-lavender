@@ -43,7 +43,12 @@ export const Header = styled("header", {
 });
 
 export const Title = styled("h1", {
-  fontSize: "2.25rem",
+  fontSize: "1.75rem",
+  lineHeight: 1.5,
+
+  "@md": {
+    fontSize: "2.25rem",
+  },
 });
 
 export const ArticleMetadata = styled("div", {

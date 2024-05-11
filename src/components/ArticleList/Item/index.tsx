@@ -4,9 +4,9 @@ import React, { memo } from "react";
 import {
   Article,
   ArticleCard,
+  ArticleDate,
   Category,
   Content,
-  Date,
   Front,
   Header,
   Section,
@@ -33,6 +33,9 @@ const ArticleListItem = ({
 }: Props) => {
   const [, month, day] = date.split("-");
 
+  const isNewArticleWithinWeek =
+    new Date(date).getTime() > new Date().getTime() - 1000 * 60 * 60 * 24 * 7;
+
   return (
     <ArticleCard key={slug}>
       <Link to={slug} itemProp="url">
@@ -43,9 +46,13 @@ const ArticleListItem = ({
         >
           <Front>
             <Category>{tags[0]}</Category>
-            <Date>
-              {month}/{day}
-            </Date>
+            <ArticleDate>
+              {isNewArticleWithinWeek ? (
+                <span className="new">NEW</span>
+              ) : (
+                `${month}/${day}`
+              )}
+            </ArticleDate>
           </Front>
           {thumbnail !== "" ? <Thumbnail src={thumbnail} /> : null}
 

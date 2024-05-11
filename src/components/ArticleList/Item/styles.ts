@@ -27,12 +27,13 @@ export const ArticleCard = styled("li", {
 
 export const Article = styled("article", {
   display: "flex",
-  gap: "2rem",
+  flexDirection: "column",
   padding: "1rem",
   marginBottom: "0.5rem",
   cursor: "default",
 
   "@md": {
+    flexDirection: "row",
     cursor: "pointer",
     gap: "1.5rem",
     padding: "1.5rem",
@@ -44,36 +45,57 @@ export const Content = styled("div", {});
 
 export const Front = styled("span", {
   display: "flex",
-  flexDirection: "column",
+  flexDirection: "row",
   alignItems: "center",
   gap: "0.5rem",
-  maxWidth: "3rem",
-  minWidth: "3rem",
   color: "$text200",
   fontStyle: "italic",
 
   "@md": {
+    flexDirection: "column",
     margin: "0rem 0.5rem",
   },
 });
 
 export const Category = styled("span", {
-  fontSize: "1.3rem",
+  fontSize: "1.1rem",
   lineHeight: 1.5,
   fontWeight: 600,
+
+  "@md": {
+    fontSize: "1.3rem",
+  },
 });
 
-export const Date = styled("span", {
+export const ArticleDate = styled("span", {
   fontSize: "1.1rem",
+
+  ".new": {
+    color: "$primary300",
+    fontWeight: 700,
+
+    "@md": {
+      margin: "0.5rem",
+    },
+  },
 });
 
 export const Header = styled("header", {
-  margin: "0rem auto 1rem",
+  marginBottom: "0.5rem",
+
+  "@md": {
+    marginBottom: "1rem",
+  },
 });
 
 export const Title = styled("h2", {
-  fontSize: "1.5rem",
   transition: ".3s",
+  lineHeight: 1.5,
+  fontSize: "1.3rem",
+
+  "@md": {
+    fontSize: "1.5rem",
+  },
 
   a: {
     color: "$text500",
@@ -88,8 +110,8 @@ export const Section = styled("section", {
   transition: "color $transitionDuration $transitionTiming",
 
   ">h4": {
-    margin: "0.5rem auto",
     fontWeight: 600,
+    lineHeight: 1.5,
   },
 });
 
