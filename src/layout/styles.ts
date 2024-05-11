@@ -90,6 +90,9 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
         whiteSpace: "pre-wrap",
       },
     },
+    span: {
+      lineHeight: 1.3,
+    },
     blockquote: {
       paddingLeft: "1rem",
       borderLeft: "0.25rem solid $borderPrimary",

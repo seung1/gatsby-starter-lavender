@@ -1,7 +1,7 @@
 ---
 title: PC와 모바일의 특성을 고려하여 개발하기
 date: "2024-05-06"
-description: "모바일에서는 터치가 있구요 PC는 호버가 있습니다."
+description: "모바일에서는 터치가 있구요. PC는 마우스가 있습니다."
 tags: [Article]
 # thumbnail: ./cross-platform-2.png
 ---

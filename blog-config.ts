@@ -1,7 +1,8 @@
 const config = {
   title: "seung1 blog", // Blog name
   author: "seung1", // Your name
-  description: "다른 개발자의 영감이 되는 사람이 되고 싶습니다.",
+  description:
+    "신뢰할 수 있는 서비스를 제공하기 위해 노력합니다. 저는 프론트엔드 개발자입니다.",
   siteUrl: "https://seung1.netlify.app",
   thumbnail: "/thumbnails/main.png", // Default blog thumbnail. i.e. '/thumbnails/main.png'
   social: {

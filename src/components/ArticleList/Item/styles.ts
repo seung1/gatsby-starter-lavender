@@ -7,7 +7,7 @@ export const ArticleCard = styled("li", {
 
   "@md": {
     "&:hover": {
-      transform: "translateY(-0.5rem)",
+      transform: "scale(1.05)",
       boxShadow:
         "rgba(0, 0, 33, 0.07) 0px 16px 22.4px 4.8px,rgba(0, 0, 33, 0.05) 0px 3.2px 16px 0px,rgba(0, 0, 33, 0.07) 0px 0px 1px 0px",
       h2: {
@@ -90,7 +90,6 @@ export const Section = styled("section", {
   ">h4": {
     margin: "0.5rem auto",
     fontWeight: 600,
-    lineHeight: 1.5,
   },
 });
 
