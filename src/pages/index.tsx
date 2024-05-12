@@ -38,12 +38,12 @@ const BlogIndex = ({
   const articlePerPage = 5;
   const totalPage = Math.ceil(posts.length / articlePerPage);
 
-  const onTitleFilterChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      setTitleFilter(event.target.value);
-    },
-    []
-  );
+  // const onTitleFilterChange = useCallback(
+  //   (event: React.ChangeEvent<HTMLInputElement>) => {
+  //     setTitleFilter(event.target.value);
+  //   },
+  //   []
+  // );
 
   const resetFilter = () => {
     setTitleFilter("");
@@ -85,8 +85,6 @@ const BlogIndex = ({
 
       <ArticleFilter
         tags={tags}
-        titleFilter={titleFilter}
-        onTitleFilterChange={onTitleFilterChange}
         currentTag={currentTag}
         setCurrentTag={setCurrentTag}
       />

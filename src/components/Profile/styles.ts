@@ -5,7 +5,7 @@ export const Container = styled("div", {
   gridTemplateColumns: "70px auto",
   marginBottom: "2rem",
   padding: "1rem",
-  borderRadius: "1rem",
+  borderRadius: "0.5rem",
 
   backgroundColor: "$gray100",
 
