@@ -1,17 +1,20 @@
 import { styled } from "~/stitches.config";
 
 export const Container = styled("header", {
+  position: "sticky",
+  top: 0,
+  zIndex: 10,
+  backgroundColor: "$backgroundColor",
+  transition: "background-color $transitionDuration $transitionTiming",
+
   display: "flex",
-  // flexDirection: "column-reverse",
   alignItems: "center",
   width: "100%",
-  margin: "0 auto",
-  padding: "2rem 0",
+  margin: "1rem auto",
+  padding: "1rem 0",
 
-  // "@md": {
   flexDirection: "row",
   justifyContent: "space-between",
-  // },
 });
 
 export const TitleWrapper = styled("div", {

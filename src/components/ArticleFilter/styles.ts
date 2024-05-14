@@ -1,7 +1,10 @@
 import { styled } from "~/stitches.config";
 
 export const Container = styled("section", {
-  margin: "-1rem 0 0.5rem",
+  position: "sticky",
+  top: "6rem",
+  zIndex: 10,
+  margin: "-0.5rem 0 0.5rem",
 
   "@md": {
     margin: "-0.5rem 0 1rem",

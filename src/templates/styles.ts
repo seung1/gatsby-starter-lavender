@@ -144,10 +144,16 @@ export const Content = styled("section", {
     },
   },
 
+  // 코드 스타일 pre: 감싸는부분 code: 내용부분
   pre: {
     code: {
       wordBreak: "break-all",
       overflowWrap: "break-word",
+      fontSize: "0.75rem", // 12px
+
+      "@md": {
+        fontSize: "0.875rem", // 14px
+      },
     },
   },
   "pre, code": {
