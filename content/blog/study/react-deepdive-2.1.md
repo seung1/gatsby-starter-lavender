@@ -219,8 +219,8 @@ var ComponentZ = React.createElement(
 
 ## 정리
 
-> 1. JSX는 페이스북에서 개발하였고 리액트에 종속되지 않는다.
+> JSX는 페이스북에서 개발하였고 리액트에 종속되지 않는다.
 >
-> 2. JSX는 JSXElement, JSXAttributes, JSXChildren, JSXStrings로 구성된다.
+> JSX는 JSXElement, JSXAttributes, JSXChildren, JSXStrings로 구성된다.
 >
-> 3. JSX는 createElement를 통해 변환된다.
+> JSX는 createElement를 통해 변환된다.

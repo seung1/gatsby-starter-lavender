@@ -325,3 +325,11 @@ const { inc, dec } = useCounterStore();
 - devTool을 이용해서 현재 전역에서 사용하는 상태의 정보를 확인가능하다
   - 리액트쿼리의 캐시 확인과 비슷
   - [devTool 참고자료](https://velog.io/@real-bird/Zustand-%EA%B3%B5%EC%8B%9D-%EB%AC%B8%EC%84%9C%EB%A7%8C-%EB%B3%B4%EA%B3%A0-Zustand-%EC%A0%81%EC%9A%A9%ED%95%B4-%EB%B3%B4%EA%B8%B0#4-1-devtools)
+
+## 정리
+
+> Recoil은 페이스북에서 만들었고 atom이라는 상태단위를 사용한다. 배포버전이 1.0.0을 넘지 않아 안정성 검토가 필요하다
+>
+> Jotai는 Recoil의 영향을 받아 atom을 사용한다. key값으로 atom 자체를 이용하여 개발자가 직접 넘겨주지 않아도 된다.
+>
+> Zustand는 Redux의 영향을 받았다. 하나의 스토어를 중앙집중형으로 활용한다.
