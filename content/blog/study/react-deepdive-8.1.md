@@ -4,7 +4,6 @@ date: "2024-05-16"
 description: "모던 리액트 Deep Dive 8.1"
 tags: [Study]
 # thumbnail: /thumbnails/hello-world.jpg
-# order: 2
 ---
 
 개발자들은 항상 예기치 못한 동작과 마주한다.
