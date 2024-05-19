@@ -128,16 +128,16 @@ export const Content = styled("section", {
 
     // 컨텐트안에 이미지를 감싸고있는 a태그에 대한 스타일 적용
     "&.gatsby-resp-image-link": {
-      borderBottom: "none",
+      // border: "none",
       overflow: "hidden",
-      borderRadius: "1rem",
+      borderRadius: "0.5rem",
       marginTop: "2rem",
       marginBottom: "1rem",
       maxHeight: "25rem",
     },
 
     img: {
-      // border: "5px solid $primary300",
+      boxShadow: "none !important",
       width: "auto !important",
       left: "50% !important",
       transform: "translateX(-50%)",

@@ -58,7 +58,7 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       display: "block",
       margin: "0 auto",
       maxWidth: "100%",
-      borderRadius: "1rem",
+      borderRadius: "0.5rem",
     },
     table: {
       width: "100%",

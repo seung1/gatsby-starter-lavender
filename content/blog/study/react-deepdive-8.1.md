@@ -74,17 +74,17 @@ eslint-config를 만드는 것은 굉장히 번거로운 일이기 때문에 개
 
 eslint-config를 선택한다고 가장했을때 가장먼저 고려되는 대상이다. 그만큼 많은 다운로드 수를 자랑하고 에어비앤비 개발자뿐 아니라 500여명의 수많은 개발자들이 유지보수를 하고 있다.
 
-Airbnb
-
 <img src="./react-deepdive-8.1-2.png" alt="eslint-config-airbnb" />
 
-Google
+<center> Airbnb </center>
 
 <img src="./react-deepdive-8.1-3.png" alt="eslint-config-google" />
 
-Naver
+<center> Google </center>
 
 <img src="./react-deepdive-8.1-4.png" alt="eslint-config-naver" />
+
+<center> Naver </center>
 
 ### @titicaca/triple-config-kit
 
