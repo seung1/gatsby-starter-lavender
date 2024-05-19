@@ -4,6 +4,7 @@ date: "2024-05-16"
 description: "모던 리액트 Deep Dive 8.1"
 tags: [Study]
 # thumbnail: /thumbnails/hello-world.jpg
+# order: 2
 ---
 
 개발자들은 항상 예기치 못한 동작과 마주한다.
@@ -316,7 +317,7 @@ console.log("안녕하세요");
 
 ## 정리
 
-> ESLint은 자바스크립트 정적 분석구이다.
+> ESLint은 자바스크립트 정적 분석도구이다.
 >
 > eslint plugin과 config가 있는데 plugin은 규칙들을 모아놓은 것이고 config는 plugin을 모아둔것이다.
 >
