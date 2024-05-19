@@ -12,11 +12,11 @@ tags: [Study]
 
 바로 정적 코드 분석이다.
 
-### 정적 코드 분석
+## 정적 코드 분석
 
-정적 코드 분석이란, 코드의 실행과는 별개로 코드 그자체만으로 코드 스멜(잠재적으로 버그를 야기할 수 있는 코드)을 찾아내어 문제의 소지가 있는 코드를 사전에 수정하는 것이다.
+정적 코드 분석이란, 코드의 실행과는 별개로 코드 그 자체만으로 코드 스멜(잠재적으로 버그를 야기할 수 있는 코드)을 찾아내어 문제의 소지가 있는 코드를 사전에 수정하는 것이다.
 
-자바스크립트 생태계에서 가장 많이 사용되는 정적 코드 분석도구는 ESLint이다.
+자바스크립트 생태계에서 가장 많이 사용되는 정적 코드 분석도구는 **ESLint**이다.
 
 ### ESLint
 
@@ -28,6 +28,8 @@ tags: [Study]
 2. 분석할 수 있는 파서(parser)로 코드를 구조화 한다.
 3. 구조화한 트리를 AST(Abstract Syntax Tree)라 하고 이를 규칙과 대조한다.
 4. 위반한 코드에 대해서 Report 혹은 Fix한다.
+
+<br/>
 
 이때, 자바스크립트를 분석할때 ESLint는 [espree](https://astexplorer.net/)라는 파서를 사용한다.
 
@@ -43,11 +45,11 @@ espree라는 코드 분석도구에서는 단순히 이 코드가 나타내는�
 
 ### eslint-plugin
 
-린트 규칙을 모아놓은 패키지이다.
+eslint 규칙을 모아놓은 패키지이다.
 
 예를들어 eslint-plugin-react가 제공하는 규칙 중하나는 [react/jsx-key](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-key.md) 라는 것이 있다.
 
-이는 **iterators에서는 key를 무조건 포함해야한다**는 규칙인데
+이 규칙은 **iterators에서는 key를 무조건 포함해야한다**는 규칙인데
 
 코드 정적 분석 도구라서 key가 유니크한 값인지까지는 확인해줄수 없지만 존재 여부만 확인해도 큰 도움을 받을 수 있다.
 
@@ -57,17 +59,19 @@ eslint-plugin이 규칙들을 모아놓은 패키지라면, eslint-config는 이
 
 이해하기로는 eslint-plugin은 규칙의 분류같은 느낌이고 eslint-config는 최종적으로 사용하기 위한 패키지 같은 느낌이다.
 
-eslint-config와 eslint-plugin의 네이밍 규칙이 있는데 반드시 한단어로 구성해야한다.
-
-예를들어 eslint-config-google은 가능하지만 eslint-config-google-play는 불가능하다.
-
-단, 특정 스코프가 붙는건 가능하다. `@titicaca/eslint-config-triple`
+> 네이밍 규칙
+>
+> eslint-config와 eslint-plugin의 네이밍 규칙이 있는데 반드시 한단어로 구성해야한다.
+>
+> 예를들어 eslint-config-google은 가능하지만 eslint-config-google-play는 불가능하다.
+>
+> 단, 특정 스코프가 붙는건 가능하다. `@titicaca/eslint-config-triple`
 
 eslint-config를 만드는 것은 굉장히 번거로운 일이기 때문에 개인 개발자가 만들기보다 일부 IT기업들에서 잘 만들어진 규칙을 가져다 쓰는것이 일반적이다.
 
 ### eslint-config-airbnb
 
-eslint-config를 선택한다고 가장했을때 가장먼저 고려되는 대상이다. 그만큼 많은 다운로드수를 자랑하고 에어비앤비 개발자뿐 아니라 500여명의 수많은 개발자들이 유지보수를 하고 있다.
+eslint-config를 선택한다고 가장했을때 가장먼저 고려되는 대상이다. 그만큼 많은 다운로드 수를 자랑하고 에어비앤비 개발자뿐 아니라 500여명의 수많은 개발자들이 유지보수를 하고 있다.
 
 Airbnb
 
@@ -107,21 +111,23 @@ Next 프레임워크를 사용하게 되면 기본적으로 추가가 된다.
 
 ### 이미 있는 규칙 커스텀하기 : Import React를 제거해보자
 
-예를들어 리액트 17버전이후에서는 이제 더이상
+예를들어 아래 코드는 리액트 17버전 이후에서 더이상 필요하지 않다.
 
 ```jsx
 import React from "react";
 ```
 
-가 필요하지 않다.
+웹팩에서 제공하는 트리쉐이킹 기능이 사용하지 않는 코드를 모두 삭제하기 때문에
 
-웹팩에서 제공하는 트리쉐이킹 기능이 사용하지 않는 코드를 모두 삭제하기 때문에 빌드되는 파일 크기는 동일하지만, 이마저도 제거할 경우 웹팩이 트리쉐이킹하는 데 걸리는 시간을 그만큼 줄일 수 있기 때문에 빌드 속도가 빨라진다.
+빌드되는 파일 크기는 동일하지만, 이마저도 제거할 경우 웹팩이 트리쉐이킹하는 데 걸리는 시간을 그만큼 줄일 수 있기 때문에 빌드 속도가 빨라진다.
 
-이미 있는 규칙을 수정하여 원하는 바를 달성해보자
+이미 있는 규칙을 수정하여 원하는 바를 달성해보자.
 
-no-restricted-imports라는 규칙은 어떤 모듈을 금지하기 위해 만들어진 규칙이다. 이것을 수정하여 원하는 목적을 달성할 것이다.
+import에 대한 규칙을 새로 만들기 위해 사용할 이미 있는 규칙은 `no-restricted-imports`이다.
 
-우리가 금지시킬 모듈은 react이고 그중에서도 default export만 금지시켜야한다.
+`no-restricted-imports`라는 규칙은 어떤 모듈을 금지하기 위해 만들어진 규칙이다. 이것을 수정하여 원하는 목적을 달성할 것이다.
+
+금지시킬 모듈은 react이고 그중에서도 default export만 금지시켜야한다.
 
 그래야
 
@@ -130,6 +136,8 @@ import { useState } from "react";
 ```
 
 와 같은 것의 금지를 막고 필요한 부분만 금지가 된다.
+
+작성한 코드는 아래와 같다.
 
 ```jsx
 module.exports = {
@@ -213,9 +221,9 @@ module.exports = {
 
 여기서 살펴보아야할 부분은
 
-- 생성자(new)를 사용해 만들었기에 표현타입이 NewExpression이다.
-- callee에서 name은 Date이다.
-- arguments가 빈배열인데 이는 인자로 아무것도 넘기지 않았기 때문이다.
+- 생성자(new)를 사용해 만들었기에 표현타입이 **NewExpression**이다.
+- callee에서 name은 **Date**이다.
+- **arguments**가 빈배열인데 이는 인자로 아무것도 넘기지 않았기 때문이다.
 
 세개를 만족하는 규칙을 작성해보자
 
@@ -265,7 +273,7 @@ module.exports = {
   },
 ```
 
-위 예시를 통해 나만의 eslint를 만들어보았다. 일명 [eslint-plugin-seung](https://www.npmjs.com/package/eslint-plugin-seung)!
+위 예시를 통해 나만의 eslint를 만들어보았다. 일명 [eslint-plugin-seung](https://www.npmjs.com/package/eslint-plugin-seung)
 
 <img src="./react-deepdive-8.1-7.png" alt="eslint-plugin-seung" />
 
@@ -275,11 +283,11 @@ module.exports = {
 
 ### Prettier와의 충돌이 발생할 수 있다.
 
-서로 충돌이 되지 않게 잘 선언하거나
+1. 서로 충돌이 되지 않게 잘 선언하거나
 
-자바스크립트, 타입스크립트는 ESLint에서 관리하고 그 외의 파일(마크다운, YAML, JSON 등)은 모두 Prettier에서 관리하는 방법이 있다.
+2. 자바스크립트, 타입스크립트는 ESLint에서 관리하고 그 외의 파일(마크다운, YAML, JSON 등)은 모두 Prettier에서 관리하는 방법이 있다.
 
-그 대신 자바스크립트에서 필요한 prettier 규칙이 있을 수 있는데, eslint-config-prettier를 사용한다.
+그 대신 자바스크립트에서 필요한 prettier 규칙이 있을 수 있는데, `eslint-config-prettier`를 사용한다.
 
 이것은 prettier에서 제공하는 모든 규칙을 eslint에서 사용할 수 있는 규칙으로 만들어둔 플러그인이다.
 
@@ -308,7 +316,7 @@ console.log("안녕하세요");
 
 ## 정리
 
-> ESLint은 자바스크립트 정적 분석도이다.
+> ESLint은 자바스크립트 정적 분석구이다.
 >
 > eslint plugin과 config가 있는데 plugin은 규칙들을 모아놓은 것이고 config는 plugin을 모아둔것이다.
 >
