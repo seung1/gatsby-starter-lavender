@@ -27,7 +27,7 @@ export const Button = styled("button", {
   width: "3.5rem",
   height: "3.5rem",
   borderRadius: "3rem",
-  backgroundColor: "$headerCircleColor",
+  backgroundColor: "$gray100",
   transition: "background-color $transitionDuration $transitionTiming",
 
   boxShadow:

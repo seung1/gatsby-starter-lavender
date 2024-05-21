@@ -2,28 +2,25 @@ import { Link } from "gatsby";
 import React, { memo } from "react";
 
 import { useCheckScroll } from "~/hooks/useCheckScroll";
-import ChatIcon from "~/components/Icons/ChatIcon";
+import DownIcon from "~/components/Icons/DownIcon";
 import MainIcon from "~/components/Icons/MainIcon";
 import UpIcon from "~/components/Icons/UpIcon";
 
 import { Container, Button, ButtonText } from "./styles";
 
 const FloatingActionButton = () => {
-  const { isAtTop, scrollToTop, scrollToBottom } = useCheckScroll();
+  const { scrollToTop, scrollToBottom } = useCheckScroll();
 
   return (
     <Container>
-      {isAtTop ? (
-        <Button onClick={scrollToBottom}>
-          <ChatIcon />
-          <ButtonText>댓글</ButtonText>
-        </Button>
-      ) : (
-        <Button onClick={scrollToTop}>
-          <UpIcon />
-          <ButtonText>상단</ButtonText>
-        </Button>
-      )}
+      <Button onClick={scrollToTop}>
+        <UpIcon />
+        <ButtonText>상단</ButtonText>
+      </Button>
+      <Button onClick={scrollToBottom}>
+        <DownIcon />
+        <ButtonText>하단</ButtonText>
+      </Button>
 
       <Link to={"/"}>
         <Button>
