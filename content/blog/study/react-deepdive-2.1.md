@@ -8,7 +8,7 @@ hashtags: [react, jsx, JSXElement, JSXAttributes, JSXChildren, JSXStrings]
 # order: 32
 ---
 
-> ## 사내 리액트 스터디
+<!-- > ## 사내 리액트 스터디
 >
 > 주 제 : 모던 리액트 Deep Dive
 >
@@ -16,7 +16,7 @@ hashtags: [react, jsx, JSXElement, JSXAttributes, JSXChildren, JSXStrings]
 >
 > 기 간 : 3월 28일 ~
 >
-> 진 행 : 4월 11일
+> 진 행 : 4월 11일 -->
 
 ## JSX
 
