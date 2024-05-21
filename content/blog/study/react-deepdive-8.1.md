@@ -3,6 +3,7 @@ title: "[React] ESLint를 활용한 정적 코드 분석"
 date: "2024-05-16"
 description: "모던 리액트 Deep Dive 8.1"
 tags: [Study]
+hashtags: [react, eslint, espree, ast, prettier]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2
 ---

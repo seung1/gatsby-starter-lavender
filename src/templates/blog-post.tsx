@@ -1,4 +1,4 @@
-import { DiscussionEmbed } from "disqus-react";
+// import { DiscussionEmbed } from "disqus-react";
 import { PageProps, graphql } from "gatsby";
 import React from "react";
 
@@ -8,8 +8,8 @@ import Profile from "~/components/Profile";
 import ScorllProgressBar from "~/components/ScorllProgressBar";
 import Seo from "~/components/Seo";
 import Tags from "~/components/Tags";
-import Utterances from "~/components/Utterances";
-import { useComment } from "~/hooks/useComment";
+// import Utterances from "~/components/Utterances";
+// import { useComment } from "~/hooks/useComment";
 import Layout from "~/layout";
 
 import "katex/dist/katex.min.css";
@@ -21,6 +21,8 @@ import {
   Footer,
   Header,
   ArticleMetadata,
+  HashTagArea,
+  HashTag,
   Title,
 } from "./styles";
 
@@ -34,12 +36,12 @@ const BlogPostTemplate = ({
   const siteThumbnail = data.site?.siteMetadata?.thumbnail;
   const { previous, next } = data;
   const { title, description, date, tags, thumbnail } = post.frontmatter!;
-  const commentConfig = useComment().site?.siteMetadata?.comment;
+  // const commentConfig = useComment().site?.siteMetadata?.comment;
 
-  const disqusConfig = {
-    title,
-    identifier: post.fields?.slug,
-  };
+  // const disqusConfig = {
+  //   title,
+  //   identifier: post.fields?.slug,
+  // };
   const meta: Metadata[] = [];
 
   if (siteThumbnail || thumbnail) {
@@ -81,21 +83,28 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html ?? "" }}
           itemProp="articleBody"
         />
+
         <Footer>
+          <HashTagArea>
+            {post.frontmatter?.hashtags?.map((hashtag) => (
+              <HashTag>{hashtag}</HashTag>
+            ))}
+          </HashTagArea>
+
           <Profile />
         </Footer>
       </Article>
 
-      {commentConfig?.utterances && (
+      {/* {commentConfig?.utterances && (
         <Utterances repo={commentConfig.utterances} />
-      )}
+      )} */}
 
-      {commentConfig?.disqusShortName && (
+      {/* {commentConfig?.disqusShortName && (
         <DiscussionEmbed
           shortname={commentConfig?.disqusShortName}
           config={disqusConfig}
         />
-      )}
+      )} */}
 
       <ArticleNavigator previousArticle={previous} nextArticle={next} />
 
@@ -132,6 +141,7 @@ export const pageQuery = graphql`
         date(formatString: "YYYY-MM-DD")
         description
         tags
+        hashtags
         thumbnail
       }
     }

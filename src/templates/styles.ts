@@ -91,6 +91,7 @@ export const Content = styled("section", {
 
   h3: {
     marginTop: "2rem",
+    lineHeight: 1.5,
   },
 
   ul: {
@@ -173,5 +174,26 @@ export const Footer = styled("footer", {
     transition: "background-color $transitionDuration $transitionTiming",
 
     content: "",
+  },
+});
+
+export const HashTagArea = styled("div", {
+  display: "flex",
+  flexWrap: "wrap",
+  marginBottom: "3rem",
+  columnGap: "1rem",
+  rowGap: "0.5rem",
+});
+
+export const HashTag = styled("h2", {
+  color: "$text200",
+  fontSize: "1.25rem",
+  display: "flex",
+  padding: "0 0.25rem",
+
+  "&::before": {
+    content: "#",
+    width: "1rem",
+    display: "inline-block",
   },
 });

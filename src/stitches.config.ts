@@ -45,6 +45,7 @@ export const { styled, css, getCssText, createTheme, globalCss } =
         headerCircleColor: "$primary200",
 
         themeSwitchBackground: "$gray500",
+        selectionBackground: "#ddd",
       },
       sizes: {
         contentWidth: "43.75rem",
@@ -98,5 +99,6 @@ export const darkTheme = createTheme("dark-theme", {
     tagFilterBackground: "$primary100",
 
     headerCircleColor: "$gray200",
+    selectionBackground: "#495467",
   },
 });

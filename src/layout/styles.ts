@@ -130,6 +130,12 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
         borderRadius: "0.5rem",
       },
     },
+
+    // 마우스로 드래그시 선택되는 부분의 스타일
+    "::selection": {
+      backgroundColor: "$selectionBackground",
+    },
+
     ':not(pre) > code[class*="language-"]': {
       color: "$inlineCodeColor",
       background: "$inlineCodeBackground",
