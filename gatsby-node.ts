@@ -13,6 +13,7 @@ export const createPages = async ({
   reporter,
 }: CreatePagesArgs) => {
   const blogPost = path.resolve("./src/templates/blog-post.tsx");
+  const tilPost = path.resolve("./src/templates/til-post.tsx");
 
   const result: {
     errors?: Error;
