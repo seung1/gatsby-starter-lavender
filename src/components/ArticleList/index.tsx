@@ -26,15 +26,14 @@ const ArticleList = ({ posts }: Props) => (
       const tags = post.frontmatter?.tags ?? [];
 
       if (draft)
-        return (
-          <ArticleDraftListItem
-            key={slug}
-            title={title}
-            tags={tags as string[]}
-            description={description}
-            thumbnail={thumbnail}
-          />
-        );
+        return null;
+        // <ArticleDraftListItem
+        //   key={slug}
+        //   title={title}
+        //   tags={tags as string[]}
+        //   description={description}
+        //   thumbnail={thumbnail}
+        // />
 
       return (
         <ArticleListItem

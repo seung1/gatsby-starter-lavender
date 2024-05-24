@@ -42,6 +42,7 @@ const BlogPostTemplate = ({
   //   title,
   //   identifier: post.fields?.slug,
   // };
+
   const meta: Metadata[] = [];
 
   if (siteThumbnail || thumbnail) {
