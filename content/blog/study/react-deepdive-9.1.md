@@ -3,7 +3,17 @@ title: "[React] NextJS 로 리액트 개발환경 구축하기"
 date: "2024-05-22"
 description: "모던 리액트 Deep Dive 9.1"
 tags: [Study]
-hashtags: [react, next, cra, tsconfig, nextconfig, eslint, prettier]
+hashtags:
+  [
+    react,
+    next,
+    create-react-app,
+    create-next-app,
+    tsconfig,
+    nextconfig,
+    eslint,
+    prettier,
+  ]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2
 ---
@@ -12,38 +22,38 @@ hashtags: [react, next, cra, tsconfig, nextconfig, eslint, prettier]
 
 프로젝트를 새로 만들때 보통 create-react-app 혹은 create-next-app을 사용한다.
 
-따라서 알아서 만들어주는 초기세팅에 익숙하여 어떠한 세팅을 해주는지 알지 못한다.
+cra라는 편리한 마법에 빠져서 개발자는 cra가 어떠한 세팅을 해주는지 알지 못할때가 많다.
 
-create-react-app은 더이상 유지보수되지 않을 가능성이 크다.
+또한 create-react-app은 더이상 유지보수되지 않을 가능성이 크다.
 
 [관련한 이슈](https://github.com/reactjs/react.dev/pull/5487#issuecomment-1409720741)
 
 <br/>
 
 > 요약
+>
+> CRA로는 최근 중요해진 ssr등을 지원할 수 없습니다. 그래서 리액트 팀에서는 여러 옵션을 고려중입니다.
+>
+> - 새로운 프레임워크를 만드는것
+>   - 데이터 가져오기, 라우팅, 번들링 및 SSG/SSR을 통합하는 프레임워크로 Create React App을 다시 설계할 수 있습니다.
+> - CRA를 중지하고 vite 템플릿만 유지하는것
+> - CRA를 프레임워크 추천도구로 전환하는것
+>
+> 가장 유력한 옵션은 CRA를 프레임워크 추천도구로 전환하는것입니다.
+>
+> 이는 기존 워크플로우를 사용할 수 있으면서 새로운 옵션도 고려할 수 있습니다.
+>
+> 그래서 리액트 팀에서는 추천 프레임워크 목록을 만들고 유지보수 할 것입니다.
+>
+> → 따라서 미래의 CRA는 리액트 어플리케이션을 만드는 보일러플레이트 CLI가 아니라 리액트 기반 프레임워크를 제안하는 런쳐형태로 변경될 예정이다.
 
-CRA로는 최근 중요해진 ssr등을 지원할 수 없습니다. 그래서 리액트 팀에서는 여러 옵션을 고려중입니다.
-
-- 새로운 프레임워크를 만드는것
-  - 데이터 가져오기, 라우팅, 번들링 및 SSG/SSR을 통합하는 프레임워크로 Create React App을 다시 설계할 수 있습니다.
-- CRA를 중지하고 vite 템플릿만 유지하는것
-- CRA를 프레임워크 추천도구로 전환하는것
-
-가장 유력한 옵션은 CRA를 프레임워크 추천도구로 전환하는것입니다.
-
-이는 기존 워크플로우를 사용할 수 있으면서 새로운 옵션도 고려할 수 있습니다.
-
-그래서 리액트 팀에서는 추천 프레임워크 목록을 만들고 유지보수 할 것입니다.
-
-→ 따라서 미래의 CRA는 리액트 어플리케이션을 만드는 보일러플레이트 CLI가 아니라 리액트 기반 프레임워크를 제안하는 런쳐형태로 변경될 예정이다.
-
----
+그래서 이 챕터에서는 cra를 쓰지 않고 개발환경을 구축하는 것에 대해 알아본다.
 
 ## create-next-app 없이 하나씩 구축하기
 
 1. npm init을 통해 package.json을 만드는 CLI를 실행한다.
 
-```jsx
+```shell
 npm init
 ```
 
@@ -53,13 +63,13 @@ npm init
 
 1. Nextjs 프로젝트를 실행하는데 필수적인 라이브러리를 설치한다.
 
-```jsx
+```shell
 npm i react react-dom next
 ```
 
 1. devDependencies에 필요한 패키지를 설치한다.
 
-```jsx
+```shell
 npm i @types/react @types/node @types/react-dom --save-dev
 
 npm i eslint eslint-config-next typescript --save-dev
@@ -79,11 +89,19 @@ JSON 최상단에 다음과 같이 입력한다.
 }
 ```
 
-위 코드를 입력하게되면, schemastore에서 제공해주는 정보를 통해 IDE에서 자동완성이 가능해진다.
+위 코드를 입력하게되면,
+
+<img src="./react-deepdive-9.1-2.png" alt="tsconfig" />
+
+schemastore에서 제공해주는 정보를 통해 IDE에서 자동완성이 가능해진다.
 
 <img src="./react-deepdive-9.1-1.png" alt="schema store vscode setting" />
 
 요즘에는 vscode의 옵션으로 들어가서 따로 지정하지 않아도 된다.
+
+아래는 tsconfig에 대한 설정들 설명이다.
+
+프로젝트에 필요한 설정들을 추가하면 된다.
 
 ```json
 // tsconfig.json
@@ -187,21 +205,19 @@ JSON 최상단에 다음과 같이 입력한다.
 }
 ```
 
-allowImportingTsExtensions
-
-→ instrumentation.ts에 쓰이는 것 때문에 추가한 옵션같은데 제거해도 될거같은 생각!!
-
 ## next.config.js 작성하기
 
 어떤 옵션이 가능한지에 대해서는 next버전에 맞게
 
 [/packages/next/server/config-shared.ts](https://github.com/vercel/next.js/blob/v12.2.0/packages/next/server/config-shared.ts)에서 확인이 가능하다.
 
-reactStrictMode : 리액트의 엄격모드를 활성화한다.
+세가지만 간단하게 알아보자.
 
-poweredByHeader : 일반적으로 보안 취약점으로 취급되는 X-Powered-By 헤더를 제거한다.
+- reactStrictMode : 리액트의 엄격모드를 활성화한다.
 
-eslint.ignoreDuringBuilds : 빌드시에 eslint를 무시하고, CI 과정에서 별도로 작동하게 만들어 빌드를 더욱 빠르게 만든다. → 커밋시 자동으로 실행하도록 하거나 별도의 트리거를 만든다.
+- poweredByHeader : 일반적으로 보안 취약점으로 취급되는 X-Powered-By 헤더를 제거한다.
+
+- eslint.ignoreDuringBuilds : 빌드시에 eslint를 무시하고, CI 과정에서 별도로 작동하게 만들어 빌드를 더욱 빠르게 만든다. → 커밋시 자동으로 실행하도록 하거나 별도의 트리거를 만든다.
 
 ## ESLint와 Prettier 설정하기
 
@@ -211,7 +227,7 @@ eslint.ignoreDuringBuilds : 빌드시에 eslint를 무시하고, CI 과정에서
 
 추가로 스타일링에 맞는 패키지를 추가한다.
 
-```jsx
+```shell
 npm i @titicaca/eslint-config-triple
 ```
 
@@ -237,13 +253,27 @@ modules.exports = {
 
 ## 스타일 설정하기
 
-next.config.js에 styledComponents: true 를 추가하면 swc 가 styled-components를 사용하는 코드를 더 빠르게 변환한다.
+next.config.js에 styledComponents: true 를 추가하면
+
+swc 가 styled-components를 사용하는 코드를 더 빠르게 변환한다.
+
+> SWC란
+>
+> - SWC는 "Speedy Web Compiler"를 의미한다.
+>
+> - SWC는 Rust로 작성된 매우 빠른 JavaScript/TypeScript 컴파일러이자 번들러이다.
+>
+> - 트랜스파일링, 번들링, 압축, 플러그인 시스템 등을 지원한다.
+>
+> - Rust를 통해 작성되어 기존 Javascript 컴파일러보다 훨씬 빠른 성능을 자랑하여 빌드 시간을 크게 줄인다.
+>
+> - Typescript도 지원하여 빠른 빌드를 제공한다.
 
 ## 정리
 
 요즘은 마이크로 프론트엔드를 지향하여 새로운 프로젝트를 구축하는 일이 비교적 잦다.
 
-이럴때는 두가지 방법이 있는데,
+이럴때 cra말고 초기에 프로젝트를 구축하는 방법은 두가지가 있는데,
 
 1. 보일러 플레이트 프로젝트를 만든다음 Template repository 옵션을 체크해두고 새로 구축하는 프로젝트마다해당 프로젝트를 선택하여 그 기반에서 생성한다.
 2. 나만의 create-seung-app을 만든다.
