@@ -47,7 +47,7 @@ export const HashTagArea = styled("div", {
   marginTop: "0.5rem",
 });
 
-export const HashTag = styled("span", {
+export const HashTag = styled("h3", {
   padding: "0.25rem 0.5rem",
   borderRadius: "0.25rem",
   backgroundColor: "$gray200",
