@@ -1,72 +1,42 @@
 import { styled } from "~/stitches.config";
 
-export const ArticleCard = styled("li", {
-  borderRadius: "1rem",
-  transition: ".3s",
+export const TilCard = styled("li", {
+  backgroundColor: "$gray100",
+  borderRadius: "0.5rem",
+  padding: "1.5rem",
 
-  "@md": {
-    "&:hover": {
-      transform: "scale(1.05)",
-      boxShadow:
-        "rgba(0, 0, 33, 0.07) 0px 16px 22.4px 4.8px,rgba(0, 0, 33, 0.05) 0px 3.2px 16px 0px,rgba(0, 0, 33, 0.07) 0px 0px 1px 0px",
-      h2: {
-        color: "$primary300",
-      },
-    },
-  },
-
-  ":active.post-list-item": {
-    transform: "scale(0.9)",
-    "@md": {
-      transform: "scale(0.95)",
-    },
-    transition: "transform .3s",
-  },
+  boxShadow:
+    "rgba(0, 0, 33, 0.07) 0px 16px 22.4px 4.8px,rgba(0, 0, 33, 0.05) 0px 3.2px 16px 0px,rgba(0, 0, 33, 0.07) 0px 0px 1px 0px",
 });
 
 export const Article = styled("article", {
   display: "flex",
   flexDirection: "column",
-  padding: "1rem 0",
   marginBottom: "0.5rem",
   cursor: "default",
 
-  "@md": {
-    flexDirection: "row",
-    cursor: "pointer",
-    gap: "1.5rem",
-    padding: "1.5rem",
-    marginBottom: "1rem",
-  },
+  gap: "0.5rem",
 });
 
 export const Content = styled("div", {});
 
 export const Front = styled("span", {
   display: "flex",
-  flexDirection: "row",
   alignItems: "center",
   gap: "0.5rem",
   color: "$text200",
   fontStyle: "italic",
-
-  "@md": {
-    flexDirection: "column",
-    margin: "0rem 0.5rem",
-  },
 });
 
-export const Category = styled("span", {
+export const TilDate = styled("span", {
   fontSize: "1.1rem",
-  lineHeight: 1.5,
-  fontWeight: 600,
 
   "@md": {
-    fontSize: "1.3rem",
+    margin: "0.5rem",
   },
 });
 
-export const ArticleDate = styled("span", {
+export const New = styled("span", {
   fontSize: "1.1rem",
 
   ".new": {
@@ -112,13 +82,4 @@ export const Section = styled("section", {
     fontWeight: 600,
     lineHeight: 1.5,
   },
-});
-
-export const Thumbnail = styled("img", {
-  borderRadius: "0.5rem",
-  objectFit: "cover",
-
-  width: "6rem",
-  height: "6rem",
-  margin: "0 1.5rem 0 0",
 });

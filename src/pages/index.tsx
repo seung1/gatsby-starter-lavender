@@ -33,6 +33,10 @@ const BlogIndex = ({
   const posts = filterPostsByTag(
     filterPostsByTitle(data.allMarkdownRemark.nodes, titleFilter),
     currentTag
+  ).filter((post) =>
+    currentTag !== TAG.TIL
+      ? !post.frontmatter?.tags?.includes("Til")
+      : post.frontmatter?.tags?.includes("Til")
   );
 
   const articlePerPage = 5;
@@ -94,6 +98,7 @@ const BlogIndex = ({
       ) : (
         <ArticleList posts={posts.slice(0, page * articlePerPage)} />
       )}
+
       <div className="infinite-scroll" ref={infiniteScrollRef} />
     </Layout>
   );
@@ -123,7 +128,9 @@ export const pageQuery = graphql`
           thumbnail
           draft
           date
+          hashtags
         }
+        html
       }
     }
   }

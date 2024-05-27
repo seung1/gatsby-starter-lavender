@@ -1,7 +1,8 @@
 import React, { memo } from "react";
 
 import ArticleListItem from "~/components/ArticleList/Item";
-import ArticleDraftListItem from "~/components/ArticleList/DraftItem";
+import TilListItem from "~/components/ArticleList/TilItem";
+// import ArticleDraftListItem from "~/components/ArticleList/DraftItem";
 // import GoogleAdsList from "~/components/GoogleAdsList";
 
 import { Container } from "./styles";
@@ -25,15 +26,31 @@ const ArticleList = ({ posts }: Props) => (
       const date = post.frontmatter?.date ?? "";
       const tags = post.frontmatter?.tags ?? [];
 
-      if (draft)
-        return null;
-        // <ArticleDraftListItem
-        //   key={slug}
-        //   title={title}
-        //   tags={tags as string[]}
-        //   description={description}
-        //   thumbnail={thumbnail}
-        // />
+      const hashtags = post.frontmatter?.hashtags ?? [];
+      const html = post.html ?? "";
+
+      const isTil = tags.includes("Til");
+
+      if (draft) return null;
+      // <ArticleDraftListItem
+      //   key={slug}
+      //   title={title}
+      //   tags={tags as string[]}
+      //   description={description}
+      //   thumbnail={thumbnail}
+      // />
+
+      if (isTil)
+        return (
+          <TilListItem
+            key={slug}
+            title={title}
+            date={date}
+            slug={slug}
+            hashtags={hashtags as string[]}
+            html={html}
+          />
+        );
 
       return (
         <ArticleListItem
