@@ -3,13 +3,12 @@ import React, { memo } from "react";
 import {
   Article,
   TilCard,
-  TilDate,
   New,
-  Content,
-  Front,
   Header,
   Section,
   Title,
+  HashTagArea,
+  HashTag,
 } from "./styles";
 
 interface Props {
@@ -26,35 +25,36 @@ const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
   const isNewArticleWithinWeek =
     new Date(date).getTime() > new Date().getTime() - 1000 * 60 * 60 * 24 * 7;
 
+  const convertedTitle = title.replace(/\s/g, "-");
+
   return (
     <TilCard key={slug}>
-      <Article
-        className="post-list-item"
-        itemScope
-        itemType="http://schema.org/Article"
-      >
-        <Front>
-          <TilDate>{`${month}/${day}`}</TilDate>
-          <New>
-            {isNewArticleWithinWeek ? <span className="new">NEW</span> : null}
-          </New>
-        </Front>
+      <Article itemScope itemType="http://schema.org/Article">
+        <Header>
+          <Title>
+            <a href={`#${convertedTitle}`}>
+              <span itemProp="headline" id={convertedTitle}>
+                {title}
+              </span>
+            </a>
+            <New>{isNewArticleWithinWeek ? "NEW" : null}</New>
+          </Title>
+        </Header>
 
-        <Content>
-          <Header>
-            <Title>
-              <span itemProp="headline">{title}</span>
-            </Title>
-          </Header>
-          <Section>
-            <h4
-              dangerouslySetInnerHTML={{
-                __html: html,
-              }}
-              itemProp="description"
-            />
-          </Section>
-        </Content>
+        <Section>
+          <h4
+            dangerouslySetInnerHTML={{
+              __html: html,
+            }}
+            itemProp="description"
+          />
+        </Section>
+
+        <HashTagArea>
+          {[`${month}/${day}`, ...hashtags]?.map((hashtag) => (
+            <HashTag>{hashtag}</HashTag>
+          ))}
+        </HashTagArea>
       </Article>
     </TilCard>
   );
