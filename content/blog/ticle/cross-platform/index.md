@@ -53,7 +53,7 @@ PC에서는 마우스를 가져다대면 나타나지만
 
 가장 쉽게 고려하는 방법은 항상 나타내는 방법이다.
 
-<img src="./cross-platform-2.png" alt="hover event" />
+<img src="./cross-platform-2.png" alt="youtube video card" />
 
 이렇게 호버이벤트의 경우 모바일에서는 <u>**항상 나타내기**</u>로 대응이 가능하다.
 
@@ -63,7 +63,7 @@ PC에서는 마우스를 가져다대면 나타나지만
 
 위와 비슷한 예시로 자동 재생 기능을 살펴보자.
 
-<img src="./cross-platform-3.png" alt="hover event" />
+<img src="./cross-platform-3.png" alt="youtube video card hover" />
 
 PC에서는 hover 이벤트를 통해서 재생하도록 한다.
 
@@ -95,7 +95,7 @@ PC에서의 포커싱은 **마우스 커서로 가리키게** 된다.
 
 그래서 가로 스크롤을 제공하기 위한 방법으로 주로 보조 버튼을 제공한다.
 
-<img src="./cross-platform-5.png" alt="hover event" />
+<img src="./cross-platform-5.png" alt="tving contents list" />
 
 컨텐츠 리스트 우측부분에 **좌우 스크롤을 도와주는 보조 버튼**을 추가 하여 클릭하면 스크롤이 가능하다.
 
@@ -111,17 +111,17 @@ PC에서만 기능을 제공하는 경우도 있다.
 
 다음은 오늘의 집의 3D 인테리어 기능 제공 예시이다.
 
-<img src="./cross-platform-6.png" alt="hover event" />
+<img src="./cross-platform-6.png" alt="ohouse web menu list" />
 
 PC에서 제공하는 3D 인테리어 기능이다.
 
-<img src="./cross-platform-7.png" alt="hover event" />
+<img src="./cross-platform-7.png" alt="ohouse mobile bottom sheet" />
 
 집사진과 살림수납 사이에 있어야하는 메뉴인데
 
 **모바일에서는 해당 기능이 제한**되어 사용할 수 없게 되어있다.
 
-<img src="./cross-platform-23.png" alt="hover event" />
+<img src="./cross-platform-23.png" alt="kakao talk gift message" />
 
 반대로 모바일에서만 이용할 수 있는 기능들도 있다.
 
@@ -141,15 +141,15 @@ PC에서 제공하는 3D 인테리어 기능이다.
 
 > 출처 : https://ishadeed.com/article/target-size/
 
-<img src="./cross-platform-8.webp" alt="hover event" />
+<img src="./cross-platform-8.webp" alt="minimum target size" />
 
 [WCAG 2.5.8, Target Size](https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html)에서는 최소한 24px은 되어야한다고 말한다.
 
-<img src="./cross-platform-9.webp" alt="hover event" />
+<img src="./cross-platform-9.webp" alt="screen touch" />
 
 이는 원활한 터치를 위해 가져야하는 사이즈이다.
 
-<img src="./cross-platform-10.png" alt="hover event" />
+<img src="./cross-platform-10.png" alt="target size" />
 
 이는 대상의 최소사이즈가 24px x 24px가 되어야함을 의미하지는 않는다.
 
@@ -157,7 +157,7 @@ PC에서 제공하는 3D 인테리어 기능이다.
 
 ### margin보다는 padding 활용하기
 
-<img src="./cross-platform-11.webp" alt="hover event" />
+<img src="./cross-platform-11.webp" alt="padding example" />
 
 터치하는 영역에 충분한 padding을 제공하여
 
@@ -165,19 +165,19 @@ PC에서 제공하는 3D 인테리어 기능이다.
 
 ### 대상의 크기 확장하기
 
-<img src="./cross-platform-12.png" alt="hover event" />
+<img src="./cross-platform-12.png" alt="slider example" />
 
 슬라이더 버튼의 경우 버튼이 있는 곳에만 터치영역을 둘 필요가 없다.
 
-<img src="./cross-platform-13.png" alt="hover event" />
+<img src="./cross-platform-13.png" alt="slider padding" />
 
 조금 더 확장하여 쉬운 접근성을 제공하자.
 
-<img src="./cross-platform-14.png" alt="hover event" />
+<img src="./cross-platform-14.png" alt="checkbox example" />
 
 체크 박스도 비슷하다.
 
-<img src="./cross-platform-15.png" alt="hover event" />
+<img src="./cross-platform-15.png" alt="checkbox and label" />
 
 체크 박스에만 이벤트를 주는 것이 아니라 옆에 텍스트를 누르더라도 동일한 이벤트가 발생하도록 한다.
 
@@ -188,11 +188,11 @@ PC에서 제공하는 3D 인테리어 기능이다.
 
 이것은 id값과 for값을 지정하여 설정할 수 있다.
 
-<img src="./cross-platform-16.png" alt="hover event" />
+<img src="./cross-platform-16.png" alt="add margin and padding" />
 
 margin과 padding을 통해 좀더 터치하기 쉬운 환경을 제공해주고
 
-<img src="./cross-platform-17.png" alt="hover event" />
+<img src="./cross-platform-17.png" alt="add max-content" />
 
 ```css
 .form-group {
@@ -204,7 +204,7 @@ margin과 padding을 통해 좀더 터치하기 쉬운 환경을 제공해주고
 
 ### 터치로 가려진 부분 보여주기
 
-<img src="./cross-platform-18.png" alt="hover event" />
+<img src="./cross-platform-18.png" alt="youtube play bar" />
 
 터치를 하게되면 손가락의 크기로 인해 해당 화면이 가려지게 된다.
 
@@ -212,7 +212,7 @@ margin과 padding을 통해 좀더 터치하기 쉬운 환경을 제공해주고
 
 유튜브 재생바에서는 터치영역 위에 현재 위치를 표시해준다.
 
-<img src="./cross-platform-19.jpeg" alt="hover event" />
+<img src="./cross-platform-19.jpeg" alt="samsung one hand operation" />
 
 이와 비슷한 예시가 하나더 있는데
 
@@ -318,7 +318,7 @@ PC에서는 상단에 메뉴가 고정되어있다.
 
 근데 최근 토스 기술블로그에서 이와 관련한 아티클이 올라왔다.
 
-<img src="./cross-platform-21.png" alt="hover event" />
+<img src="./cross-platform-21.png" alt="toss article image" />
 
 > 출처 : https://toss.tech/article/tds-component-making
 
