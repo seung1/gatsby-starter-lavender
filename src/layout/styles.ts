@@ -116,10 +116,10 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       overflowWrap: "break-word",
 
       "ul, ol": {
-        marginLeft: "2rem",
+        marginLeft: "1.5rem",
 
         "ul, ol": {
-          marginLeft: "1.5rem",
+          marginLeft: "1rem",
         },
 
         li: {
