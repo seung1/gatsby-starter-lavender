@@ -1,9 +1,6 @@
 import { styled } from "~/stitches.config";
 
 export const Container = styled("section", {
-  position: "sticky",
-  top: "6rem",
-  zIndex: 10,
   margin: "-0.5rem 0 0.5rem",
 
   "@md": {
@@ -31,7 +28,8 @@ export const Tag = styled("button", {
   backgroundColor: "$gray100",
   cursor: "pointer",
 
-  transition: ".5s",
+  transition:
+    "background-color $transitionDuration $transitionTiming, color $transitionDuration $transitionTiming",
 
   appearance: "none",
   flexGrow: 1,

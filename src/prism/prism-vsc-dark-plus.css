@@ -43,11 +43,19 @@ pre[class*="language-"] {
   background: #1e1e1e;
 }
 
+pre[class*="language-"]::-webkit-scrollbar {
+  height: 0.5em;
+}
+pre[class*="language-"]::-webkit-scrollbar-thumb {
+  background-color: #b8ae9f;
+  border-radius: 0.5em;
+}
+
 :not(pre) > code[class*="language-"] {
   padding: 0.1em 0.3em;
   border-radius: 0.3em;
-  color: #db4c69;
-  background: #f9f2f4;
+  color: #d4d4d4;
+  background: #4f4f4f;
 }
 /*********************************************************
 * Tokens

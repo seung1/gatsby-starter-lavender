@@ -51,9 +51,9 @@ export const LinkItem = styled("li", {
 
   listStyle: "none",
 
-  transition: "color $transitionDuration $transitionTiming",
-
   a: {
     color: "$link",
+
+    transition: "color $transitionDuration $transitionTiming",
   },
 });

@@ -2,10 +2,11 @@ import { styled } from "~/stitches.config";
 
 export const TilCard = styled("li", {
   backgroundColor: "$gray100",
-  borderRadius: "0 0.5rem 0.5rem 0",
+  borderRadius: "0.5rem",
   padding: "1.5rem",
-  borderLeft: "0.25rem solid $primary200",
-  marginTop: "2rem",
+  marginTop: "1.5rem",
+
+  transition: "background-color $transitionDuration $transitionTiming",
 });
 
 export const Article = styled("article", {
@@ -25,7 +26,6 @@ export const New = styled("span", {
 export const Header = styled("header", {});
 
 export const Title = styled("h2", {
-  transition: ".3s",
   lineHeight: 1.5,
   fontSize: "1.3rem",
 
@@ -35,9 +35,9 @@ export const Title = styled("h2", {
 });
 
 export const Section = styled("section", {
-  color: "$text200",
-
-  transition: "color $transitionDuration $transitionTiming",
+  h4: {
+    fontWeight: 300,
+  },
 });
 
 export const HashTagArea = styled("div", {
@@ -53,4 +53,7 @@ export const HashTag = styled("h3", {
   backgroundColor: "$gray200",
   color: "$text200",
   fontSize: "0.75rem",
+
+  transition:
+    "background-color $transitionDuration $transitionTiming, color $transitionDuration $transitionTiming",
 });

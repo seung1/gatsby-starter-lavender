@@ -12,6 +12,13 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       boxSizing: "border-box",
       margin: 0,
       padding: 0,
+      "::-webkit-scrollbar": {
+        width: "0.5rem",
+      },
+      "::-webkit-scrollbar-thumb": {
+        backgroundColor: "$text200",
+        borderRadius: "0.25rem",
+      },
     },
     html: {
       minHeight: "100vh",
@@ -136,10 +143,9 @@ export const globalStyles = (colorScheme: "light" | "dark") =>
       backgroundColor: "$selectionBackground",
     },
 
-    ':not(pre) > code[class*="language-"]': {
-      color: "$inlineCodeColor",
-      background: "$inlineCodeBackground",
-    },
+    // ':not(pre) > code[class*="language-"]': {
+    //   background: "$inlineCodeBackground",
+    // },
   })();
 export const Root = styled("div", {
   display: "flex",
