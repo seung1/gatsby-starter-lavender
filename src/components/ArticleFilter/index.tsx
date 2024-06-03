@@ -46,15 +46,6 @@ const ArticleFilter = ({ tags, currentTag, setCurrentTag }: Props) => {
           {TAG.MAIN}
         </Tag>
 
-        <Tag
-          type="button"
-          data-tag={TAG.ALL}
-          onClick={onClickTag}
-          filtered={currentTag === TAG.ALL}
-        >
-          {TAG.ALL}
-        </Tag>
-
         {tags.map((tag) => (
           <Tag
             type="button"
