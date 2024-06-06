@@ -1,22 +1,14 @@
 ---
-title: "[React] JSX란?"
+title: "JSX란?"
 date: "2024-04-11"
 description: "모던 리액트 Deep Dive 2.1"
-tags: [Study]
+tags: [React]
 hashtags: [react, jsx, JSXElement, JSXAttributes, JSXChildren, JSXStrings]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32
 ---
 
-<!-- > ## 사내 리액트 스터디
->
-> 주 제 : 모던 리액트 Deep Dive
->
-> 인 원 : 3명
->
-> 기 간 : 3월 28일 ~
->
-> 진 행 : 4월 11일 -->
+### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
 
 ## JSX
 

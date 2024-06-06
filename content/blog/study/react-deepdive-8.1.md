@@ -1,20 +1,22 @@
 ---
-title: "[React] ESLint를 활용한 정적 코드 분석"
+title: "ESLint를 활용한 정적 코드 분석"
 date: "2024-05-16"
 description: "모던 리액트 Deep Dive 8.1"
-tags: [Study]
+tags: [React]
 hashtags: [react, eslint, espree, ast, prettier]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2
 ---
+
+### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+
+## 정적 코드 분석
 
 개발자들은 항상 예기치 못한 동작과 마주한다.
 
 이런 동작을 방지하기 위한 방법으로 가장 빠르게 시도해 볼 수 있는건
 
 바로 정적 코드 분석이다.
-
-## 정적 코드 분석
 
 정적 코드 분석이란, 코드의 실행과는 별개로 코드 그 자체만으로 코드 스멜(잠재적으로 버그를 야기할 수 있는 코드)을 찾아내어 문제의 소지가 있는 코드를 사전에 수정하는 것이다.
 

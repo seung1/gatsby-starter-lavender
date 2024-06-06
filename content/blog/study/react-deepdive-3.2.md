@@ -1,22 +1,14 @@
 ---
-title: "[React] 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
+title: "사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
 date: "2024-04-17"
 description: "모던 리액트 Deep Dive 3.2"
-tags: [Study]
+tags: [React]
 hashtags: [react, customHook, hook, hoc]
 # thumbnail: /thumbnails/hello-world.jpg
 order: 32
 ---
 
-<!-- > ## 사내 리액트 스터디
->
-> 주 제 : 모던 리액트 Deep Dive
->
-> 인 원 : 3명
->
-> 기 간 : 3월 28일 ~
->
-> 진 행 : 4월 17일 -->
+### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
 
 ## 리액트에서 재사용할 수 있는 로직을 관리하는 두 가지 방법
 

@@ -1,8 +1,8 @@
 ---
-title: "[React] NextJS 로 리액트 개발환경 구축하기"
+title: "NextJS 로 리액트 개발환경 구축하기"
 date: "2024-05-22"
 description: "모던 리액트 Deep Dive 9.1"
-tags: [Study]
+tags: [React]
 hashtags:
   [
     react,
@@ -17,6 +17,8 @@ hashtags:
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2
 ---
+
+### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
 
 ## 도입
 
