@@ -1,12 +1,17 @@
 import { styled } from "~/stitches.config";
 
 export const TilCard = styled("li", {
+  cursor: "default",
   backgroundColor: "$gray100",
   borderRadius: "0.5rem",
   padding: "1.5rem",
   marginTop: "1.5rem",
 
   transition: "background-color $transitionDuration $transitionTiming",
+
+  "@md": {
+    cursor: "pointer",
+  },
 });
 
 export const Article = styled("article", {
@@ -34,9 +39,19 @@ export const Title = styled("h2", {
   },
 });
 
-export const Section = styled("section", {
+export const OpenSection = styled("section", {
   h4: {
     fontWeight: 300,
+  },
+});
+
+export const CloseSection = styled("section", {
+  h4: {
+    fontWeight: 300,
+    display: "-webkit-box",
+    WebkitLineClamp: 5,
+    WebkitBoxOrient: "vertical",
+    overflow: "hidden",
   },
 });
 

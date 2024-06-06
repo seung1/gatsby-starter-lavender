@@ -1,11 +1,12 @@
-import React, { memo } from "react";
+import React, { memo, useState } from "react";
 
 import {
   Article,
   TilCard,
   New,
   Header,
-  Section,
+  OpenSection,
+  CloseSection,
   Title,
   HashTagArea,
   HashTag,
@@ -20,6 +21,8 @@ interface Props {
 }
 
 const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
+  const [isTilOpen, setIsTilOpen] = useState(false);
+
   const [, month, day] = date.split("-");
 
   const isNewArticleWithinWeek =
@@ -28,7 +31,7 @@ const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
   const convertedTitle = title.replace(/\s/g, "-");
 
   return (
-    <TilCard key={slug}>
+    <TilCard key={slug} onClick={() => setIsTilOpen(!isTilOpen)}>
       <Article itemScope itemType="http://schema.org/Article">
         <Header>
           <Title>
@@ -41,14 +44,25 @@ const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
           </Title>
         </Header>
 
-        <Section>
-          <h4
-            dangerouslySetInnerHTML={{
-              __html: html,
-            }}
-            itemProp="description"
-          />
-        </Section>
+        {isTilOpen ? (
+          <OpenSection>
+            <h4
+              dangerouslySetInnerHTML={{
+                __html: html,
+              }}
+              itemProp="description"
+            />
+          </OpenSection>
+        ) : (
+          <CloseSection>
+            <h4
+              dangerouslySetInnerHTML={{
+                __html: html,
+              }}
+              itemProp="description"
+            />
+          </CloseSection>
+        )}
 
         <HashTagArea>
           {[`${month}/${day}`, ...hashtags]?.map((hashtag) => (
