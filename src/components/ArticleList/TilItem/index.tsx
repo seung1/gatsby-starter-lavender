@@ -8,6 +8,7 @@ import {
   OpenSection,
   CloseSection,
   Title,
+  Description,
   HashTagArea,
   HashTag,
 } from "./styles";
@@ -16,11 +17,19 @@ interface Props {
   slug: string;
   title: string;
   date: string;
+  description: string;
   hashtags: string[];
   html: string;
 }
 
-const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
+const TilListItem = ({
+  slug,
+  title,
+  date,
+  description,
+  hashtags,
+  html,
+}: Props) => {
   const [isTilOpen, setIsTilOpen] = useState(false);
 
   const [, month, day] = date.split("-");
@@ -63,6 +72,8 @@ const TilListItem = ({ slug, title, date, hashtags, html }: Props) => {
             />
           </CloseSection>
         )}
+
+        <Description>{description}</Description>
 
         <HashTagArea>
           {[`${month}/${day}`, ...hashtags]?.map((hashtag) => (

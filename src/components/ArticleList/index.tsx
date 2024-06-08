@@ -47,6 +47,7 @@ const ArticleList = ({ posts }: Props) => (
             title={title}
             date={date}
             slug={slug}
+            description={description}
             hashtags={hashtags as string[]}
             html={html}
           />

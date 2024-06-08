@@ -18,7 +18,11 @@ export const Article = styled("article", {
   display: "flex",
   flexDirection: "column",
 
-  gap: "1rem",
+  gap: "0.25rem",
+
+  "@md": {
+    gap: "1rem",
+  },
 });
 
 export const New = styled("span", {
@@ -46,6 +50,7 @@ export const OpenSection = styled("section", {
 });
 
 export const CloseSection = styled("section", {
+  display: "none",
   h4: {
     fontWeight: 300,
     display: "-webkit-box",
@@ -53,13 +58,32 @@ export const CloseSection = styled("section", {
     WebkitBoxOrient: "vertical",
     overflow: "hidden",
   },
+
+  "@md": {
+    display: "block",
+  },
+});
+
+export const Description = styled("p", {
+  color: "$text200",
+  fontSize: "0.875rem",
+  lineHeight: 1.5,
+  fontWeight: 700,
+
+  "@md": {
+    display: "none",
+  },
 });
 
 export const HashTagArea = styled("div", {
-  display: "flex",
+  display: "none",
   gap: "0.5rem",
   flexWrap: "wrap",
   marginTop: "0.5rem",
+
+  "@md": {
+    display: "flex",
+  },
 });
 
 export const HashTag = styled("h3", {
