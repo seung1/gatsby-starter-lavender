@@ -1,12 +1,13 @@
 import { styled } from "~/stitches.config";
 
 export const ArticleCard = styled("li", {
-  borderRadius: "1rem",
-  transition: ".3s",
+  borderRadius: "0.5rem",
+  transition: "$transitionDuration $transitionTiming",
+  backgroundColor: "$gray100",
 
   "@md": {
     "&:hover": {
-      transform: "scale(1.05)",
+      transform: "scale(1.02)",
       boxShadow:
         "rgba(0, 0, 33, 0.07) 0px 16px 22.4px 4.8px,rgba(0, 0, 33, 0.05) 0px 3.2px 16px 0px,rgba(0, 0, 33, 0.07) 0px 0px 1px 0px",
       h2: {
@@ -16,10 +17,7 @@ export const ArticleCard = styled("li", {
   },
 
   ":active.post-list-item": {
-    transform: "scale(0.9)",
-    "@md": {
-      transform: "scale(0.95)",
-    },
+    transform: "scale(0.95)",
     transition: "transform .3s",
   },
 });
@@ -27,15 +25,14 @@ export const ArticleCard = styled("li", {
 export const Article = styled("article", {
   display: "flex",
   flexDirection: "column",
-  padding: "1rem 0",
-  marginBottom: "0.5rem",
+  padding: "1.25rem 1.25rem",
+  marginBottom: "1rem",
   cursor: "default",
 
   "@md": {
     flexDirection: "row",
     cursor: "pointer",
     gap: "1.5rem",
-    padding: "1.5rem",
     marginBottom: "1rem",
   },
 });
@@ -49,6 +46,8 @@ export const Front = styled("span", {
   gap: "0.5rem",
   color: "$text200",
   fontStyle: "italic",
+  marginBottom: "0.5rem",
+  transition: "$transitionDuration $transitionTiming",
 
   "@md": {
     flexDirection: "column",
@@ -81,20 +80,11 @@ export const ArticleDate = styled("span", {
 
 export const Header = styled("header", {
   marginBottom: "0.5rem",
-
-  "@md": {
-    marginBottom: "1rem",
-  },
 });
 
 export const Title = styled("h2", {
-  transition: ".3s",
   lineHeight: 1.5,
   fontSize: "1.3rem",
-
-  "@md": {
-    fontSize: "1.5rem",
-  },
 
   a: {
     color: "$text500",
