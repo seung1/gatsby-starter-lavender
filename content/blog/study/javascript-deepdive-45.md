@@ -19,8 +19,6 @@ hashtags:
     reject,
     then,
     finally,
-    async,
-    await,
   ]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32
