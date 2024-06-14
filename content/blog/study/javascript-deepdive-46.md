@@ -1,7 +1,7 @@
 ---
 title: "제너레이터와 async/await"
 date: "2024-03-20"
-description: "[study] 모던 자바스크립트 Deep Dive 46"
+description: "모던 자바스크립트 Deep Dive 46"
 tags: [Javascript]
 hashtags: [javascript, generator, yield, throw, settled, resolve]
 # thumbnail: /thumbnails/hello-world.jpg
