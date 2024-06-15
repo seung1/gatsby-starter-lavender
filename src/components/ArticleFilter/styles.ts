@@ -1,7 +1,7 @@
 import { styled } from "~/stitches.config";
 
 export const Container = styled("section", {
-  margin: "-0.5rem 0 1rem",
+  margin: "0 0 1.5rem",
 });
 
 export const TagListWrapper = styled("div", {
