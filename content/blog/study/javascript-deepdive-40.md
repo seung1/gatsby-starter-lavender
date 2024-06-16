@@ -19,6 +19,8 @@ hashtags:
 # order: 32
 ---
 
+### [공부자료 : 모던 자바스크립트 Deep Dive - 이웅모](https://poiemaweb.com/)
+
 ### 이벤트 핸들러
 
 이벤트 핸들러 : 이벤트가 발생했을때 호출될 함수
