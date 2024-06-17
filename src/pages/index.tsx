@@ -33,11 +33,12 @@ const BlogIndex = ({
   const posts = filterPostsByTag(
     filterPostsByTitle(data.allMarkdownRemark.nodes, titleFilter),
     currentTag
-  ).filter((post) =>
-    currentTag !== TAG.TIL
-      ? !post.frontmatter?.tags?.includes("Til")
-      : post.frontmatter?.tags?.includes("Til")
   );
+  // .filter((post) =>
+  //   currentTag !== TAG.TIL
+  //     ? !post.frontmatter?.tags?.includes("Til")
+  //     : post.frontmatter?.tags?.includes("Til")
+  // );
 
   const articlePerPage = 5;
   const totalPage = Math.ceil(posts.length / articlePerPage);
