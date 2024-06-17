@@ -1,7 +1,8 @@
 User-agent: *
 
-Allow: /article/*
+Allow: /
 Allow: /study/*
-Allow: /about
+Allow: /ticle/*
+Allow: /til/*
 
 Sitemap: https://seung1.netlify.app/sitemap-index.xml
