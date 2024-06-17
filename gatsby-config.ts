@@ -23,14 +23,21 @@ export const plugins = [
   {
     resolve: "gatsby-source-filesystem",
     options: {
-      path: `${__dirname}/content/blog`,
-      name: "blog",
+      path: `${__dirname}/content/blog/study`,
+      name: "study",
     },
   },
   {
     resolve: "gatsby-source-filesystem",
     options: {
-      path: `${__dirname}/content/til`,
+      path: `${__dirname}/content/blog/ticle`,
+      name: "ticle",
+    },
+  },
+  {
+    resolve: "gatsby-source-filesystem",
+    options: {
+      path: `${__dirname}/content/blog/til`,
       name: "til",
     },
   },
