@@ -1,14 +1,20 @@
 ---
-title: "제너레이터와 async/await"
+title: "[Javascript] 제너레이터와 async/await"
 date: "2024-03-20"
 description: "모던 자바스크립트 Deep Dive 46"
-tags: [Javascript]
+tags: [study]
 hashtags: [javascript, generator, yield, throw, settled, resolve]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32
 ---
 
-### [공부자료 : 모던 자바스크립트 Deep Dive - 이웅모](https://poiemaweb.com/)
+> ### [공부자료 : 모던 자바스크립트 Deep Dive - 이웅모](https://poiemaweb.com/)
+>
+> 주 1회, 진도를 정해서 그룹 스터디를 진행했습니다.
+>
+> 책을 기반하여 제가 이해하기 쉽게 정리했습니다.
+>
+> 진행날짜 : 2024-03-20
 
 ## 제너레이터 generator
 

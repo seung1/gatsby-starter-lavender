@@ -1,8 +1,8 @@
 ---
-title: "NextJS 로 리액트 개발환경 구축하기"
+title: "[React] NextJS 로 리액트 개발환경 구축하기"
 date: "2024-05-22"
 description: "모던 리액트 Deep Dive 9.1"
-tags: [React]
+tags: [study]
 hashtags:
   [
     react,
@@ -18,7 +18,13 @@ hashtags:
 # order: 2
 ---
 
-### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+> ### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+>
+> 주 1회, 진도를 정해서 그룹 스터디를 진행했습니다.
+>
+> 책을 기반하여 제가 이해하기 쉽게 정리했습니다.
+>
+> 진행날짜 : 2024-05-22
 
 ## 도입
 

@@ -1,14 +1,20 @@
 ---
-title: "사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
+title: "[React] 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
 date: "2024-04-17"
 description: "모던 리액트 Deep Dive 3.2"
-tags: [React]
+tags: [study]
 hashtags: [react, customHook, hook, hoc]
 # thumbnail: /thumbnails/hello-world.jpg
 order: 32
 ---
 
-### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+> ### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+>
+> 주 1회, 진도를 정해서 그룹 스터디를 진행했습니다.
+>
+> 책을 기반하여 제가 이해하기 쉽게 정리했습니다.
+>
+> 진행날짜 : 2024-04-17
 
 ## 리액트에서 재사용할 수 있는 로직을 관리하는 두 가지 방법
 

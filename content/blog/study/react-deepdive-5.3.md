@@ -1,14 +1,20 @@
 ---
-title: "상태 관리 라이브러리 Recoil, Jotai, Zustand 살펴보기"
+title: "[React] 상태 관리 라이브러리 Recoil, Jotai, Zustand 살펴보기"
 date: "2024-05-09"
 description: "모던 리액트 Deep Dive 5.3"
-tags: [React]
+tags: [study]
 hashtags: [react, recoil, jotai, atom, selector, zustand]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2
 ---
 
-### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+> ### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+>
+> 주 1회, 진도를 정해서 그룹 스터디를 진행했습니다.
+>
+> 책을 기반하여 제가 이해하기 쉽게 정리했습니다.
+>
+> 진행날짜 : 2024-05-09
 
 ## Recoil
 

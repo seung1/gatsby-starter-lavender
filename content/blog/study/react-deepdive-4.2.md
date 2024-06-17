@@ -1,8 +1,8 @@
 ---
-title: "서버사이드 렌더링을 위한 리액트 API 살펴보기"
+title: "[React] 서버사이드 렌더링을 위한 리액트 API 살펴보기"
 date: "2024-04-24"
 description: "모던 리액트 Deep Dive 4.2"
-tags: [React]
+tags: [study]
 hashtags:
   [
     react,
@@ -19,7 +19,13 @@ hashtags:
 # order: 2
 ---
 
-### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+> ### [공부자료 : 모던 리액트 Deep Dive - 김용찬](https://yceffort.kr/2023/10/react-deep-dive)
+>
+> 주 1회, 진도를 정해서 그룹 스터디를 진행했습니다.
+>
+> 책을 기반하여 제가 이해하기 쉽게 정리했습니다.
+>
+> 진행날짜 : 2024-04-24
 
 ## 리액트에서 제공하는 서버에서 렌더링하는 API
 
