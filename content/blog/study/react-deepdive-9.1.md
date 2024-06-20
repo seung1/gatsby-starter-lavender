@@ -2,7 +2,7 @@
 title: "[React] NextJS 로 리액트 개발환경 구축하기"
 date: "2024-05-22"
 description: "모던 리액트 Deep Dive 9.1"
-tags: [study]
+tags: [Study]
 hashtags:
   [
     react,

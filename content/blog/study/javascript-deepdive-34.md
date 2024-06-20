@@ -2,7 +2,7 @@
 title: "[Javascript] 이터러블"
 date: "2024-02-14"
 description: "모던 자바스크립트 Deep Dive 34"
-tags: [study]
+tags: [Study]
 hashtags: [javascript, iterator, iterable, array]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32

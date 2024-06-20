@@ -2,7 +2,7 @@
 title: "[Javascript] 이벤트"
 date: "2024-03-06"
 description: "모던 자바스크립트 Deep Dive 40"
-tags: [study]
+tags: [Study]
 hashtags:
   [
     javascript,

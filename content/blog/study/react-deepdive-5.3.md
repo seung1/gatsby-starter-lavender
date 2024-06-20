@@ -2,7 +2,7 @@
 title: "[React] 상태 관리 라이브러리 Recoil, Jotai, Zustand 살펴보기"
 date: "2024-05-09"
 description: "모던 리액트 Deep Dive 5.3"
-tags: [study]
+tags: [Study]
 hashtags: [react, recoil, jotai, atom, selector, zustand]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 2

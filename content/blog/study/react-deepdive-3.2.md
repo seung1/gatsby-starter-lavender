@@ -2,7 +2,7 @@
 title: "[React] 사용자 정의 훅과 고차 컴포넌트 중 무엇을 써야 할까?"
 date: "2024-04-17"
 description: "모던 리액트 Deep Dive 3.2"
-tags: [study]
+tags: [Study]
 hashtags: [react, customHook, hook, hoc]
 # thumbnail: /thumbnails/hello-world.jpg
 order: 32

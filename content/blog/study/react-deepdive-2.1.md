@@ -2,7 +2,7 @@
 title: "[React] JSX란?"
 date: "2024-04-11"
 description: "모던 리액트 Deep Dive 2.1"
-tags: [study]
+tags: [Study]
 hashtags: [react, jsx, JSXElement, JSXAttributes, JSXChildren, JSXStrings]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32

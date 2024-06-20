@@ -2,7 +2,7 @@
 title: "[Javascript] 디스트럭처링 할당"
 date: "2024-02-19"
 description: "모던 자바스크립트 Deep Dive 36"
-tags: [study]
+tags: [Study]
 hashtags: [javascript, destructuring, object, array]
 # thumbnail: /thumbnails/hello-world.jpg
 # order: 32

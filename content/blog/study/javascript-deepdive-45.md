@@ -2,7 +2,7 @@
 title: "[Javascript] 프로미스"
 date: "2024-03-13"
 description: "모던 자바스크립트 Deep Dive 45"
-tags: [study]
+tags: [Study]
 hashtags:
   [
     javascript,
