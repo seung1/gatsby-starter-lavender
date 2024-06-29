@@ -1,6 +1,6 @@
 import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
-import React, { memo, PropsWithChildren } from "react";
+import React, { memo, PropsWithChildren, useState } from "react";
 
 import { useAuthorProfile } from "~/hooks/useAuthorProfile";
 import { useCheckAboutPage } from "~/hooks/useCheckAboutPage";
@@ -46,7 +46,9 @@ const Profile = () => {
   const isAboutPageExists = useCheckAboutPage();
   const isMainPage = useCheckMainPage();
 
-  const author = siteMetadata?.author;
+  const [clickCount, setClickCount] = useState(1);
+
+  const author = siteMetadata?.author || "";
   const description = siteMetadata?.description;
   const social = siteMetadata?.social;
 
@@ -86,8 +88,12 @@ const Profile = () => {
         alt="Profile picture"
       />
       <Wrapper>
-        <Name>
-          <strong>{author}</strong>
+        <Name
+          onClick={() => {
+            setClickCount(clickCount + 1);
+          }}
+        >
+          <strong>{[author.slice(0, 5) + clickCount]}</strong>
         </Name>
 
         <Description>{description}</Description>

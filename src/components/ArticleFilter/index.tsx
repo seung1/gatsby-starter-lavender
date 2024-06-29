@@ -3,6 +3,7 @@ import React, {
   memo,
   MouseEvent,
   useCallback,
+  useState,
 } from "react";
 
 import { TAG } from "~/constants";
@@ -18,14 +19,26 @@ interface Props {
 }
 
 const ArticleFilter = ({ tags, currentTag, setCurrentTag }: Props) => {
+  const [tilClickCount, setClickCount] = useState(0);
+
   const onClickTag = useCallback(
     (e: MouseEvent<HTMLButtonElement>) => {
       const tag = (e.target as HTMLButtonElement).dataset["tag"] as string;
+
+      if (tag === TAG.TIL) {
+        setClickCount((prev) => prev + 1);
+      }
+
+      if (tag === TAG.MAIN) {
+        setClickCount(0);
+      }
 
       setCurrentTag(tag);
     },
     [setCurrentTag]
   );
+
+  const tagsWithout_Story = tags.filter((tag) => tag !== TAG._Story);
 
   return (
     <Container>
@@ -46,7 +59,7 @@ const ArticleFilter = ({ tags, currentTag, setCurrentTag }: Props) => {
           {TAG.MAIN}
         </Tag>
 
-        {tags.map((tag) => (
+        {(tilClickCount >= 3 ? tags : tagsWithout_Story).map((tag) => (
           <Tag
             type="button"
             key={tag}
