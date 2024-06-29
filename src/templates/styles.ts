@@ -145,6 +145,12 @@ export const Content = styled("section", {
     },
   },
 
+  b: {
+    color: "orange",
+    fontWeight: 700,
+    margin: "0 0.5rem",
+  },
+
   // 코드 스타일 pre: 감싸는부분 code: 내용부분
   pre: {
     code: {
