@@ -4,5 +4,6 @@ Allow: /
 Allow: /study/*
 Allow: /ticle/*
 Allow: /til/*
+Allow: /_story/*
 
 Sitemap: https://seung1.netlify.app/sitemap-index.xml
