@@ -1,9 +1,12 @@
 User-agent: *
 
 Allow: /
-Allow: /study/*
+Allow: /study/react/*
+Allow: /study/javascript/*
+Allow: /study/network/*
 Allow: /ticle/*
 Allow: /til/*
 Allow: /_story/*
+Allow: /about
 
 Sitemap: https://seung1.netlify.app/sitemap-index.xml
