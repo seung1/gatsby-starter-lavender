@@ -1,4 +1,4 @@
-import * as qs from "query-string";
+import queryString from "query-string";
 import { useEffect, useState } from "react";
 
 import { TAG } from "~/constants";
@@ -8,7 +8,7 @@ export const useTag = (): [string, (t: string) => void] => {
   const [currentTag, setCurrentTag] = useState<string>(TAG.MAIN);
 
   const onPopState = () => {
-    const params = qs.parse(location.search);
+    const params = queryString.parse(location.search);
     const tag = params.tag as string;
 
     // 함수가 실행될때 쿼리파라미터에 탭이 있으면 탭, 없으면 메인으로 설정
@@ -16,7 +16,7 @@ export const useTag = (): [string, (t: string) => void] => {
   };
 
   useEffect(() => {
-    const params = qs.parse(location.search);
+    const params = queryString.parse(location.search);
     const tag = params.tag as string;
 
     // 렌더링이 되자마자 탭이 있으면 탭을 설정
@@ -32,7 +32,7 @@ export const useTag = (): [string, (t: string) => void] => {
   }, []);
 
   useEffect(() => {
-    const params = qs.parse(location.search);
+    const params = queryString.parse(location.search);
 
     if (currentTag === (params.tag ?? TAG.MAIN)) {
       return;
@@ -45,7 +45,7 @@ export const useTag = (): [string, (t: string) => void] => {
       params.tag = currentTag;
     }
 
-    const nextUrl = qs.stringifyUrl(
+    const nextUrl = queryString.stringifyUrl(
       {
         url: location.pathname,
         query: params,

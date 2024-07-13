@@ -4,7 +4,7 @@ export const useArticleTags = () =>
   useStaticQuery<GatsbyTypes.ArticleTagsQuery>(graphql`
     query ArticleTags {
       allMarkdownRemark {
-        distinct(field: frontmatter___tags)
+        distinct(field: { frontmatter: { tags: SELECT } })
       }
     }
   `);

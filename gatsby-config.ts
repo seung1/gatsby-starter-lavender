@@ -136,8 +136,7 @@ export const plugins = [
           query: `
             {
               allMarkdownRemark(
-                sort: { order: DESC, fields: [frontmatter___date] },
-              ) {
+                sort: {frontmatter: {date: DESC}}) {
                 nodes {
                   excerpt
                   html
@@ -229,5 +228,6 @@ export { siteMetadata };
 
 export const flags = {
   DEV_SSR: true,
-  PARALLEL_QUERY_RUNNING: false, // Disabled due to PQR-related build issue. see https://github.com/gatsbyjs/gatsby/discussions/32389#discussioncomment-1034690
+  PARALLEL_SOURCING: true,
+  // PARALLEL_QUERY_RUNNING: false, // Disabled due to PQR-related build issue. see https://github.com/gatsbyjs/gatsby/discussions/32389#discussioncomment-1034690
 };
