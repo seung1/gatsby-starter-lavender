@@ -172,56 +172,79 @@ export const plugins = [
   "gatsby-plugin-react-helmet",
   "gatsby-plugin-offline",
   "gatsby-plugin-typegen",
-  "gatsby-plugin-sitemap",
-  // 서치콘솔에서 입력이 되는걸로 보아 일단 보류
-  // {
-  //   resolve: "gatsby-plugin-sitemap",
-  //   options: {
-  //     query: `
-  //     {
-  //       allSitePage {
-  //         nodes {
-  //           path
-  //         }
-  //       }
-  //       allWpContentNode(filter: {nodeType: {in: ["Post", "Page"]}}) {
-  //         nodes {
-  //           ... on WpPost {
-  //             uri
-  //             modifiedGmt
-  //           }
-  //           ... on WpPage {
-  //             uri
-  //             modifiedGmt
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `,
-  //     resolveSiteUrl: () => siteMetadata.siteUrl,
-  //     resolvePages: ({
-  //       allSitePage: { nodes: allPages },
-  //       allWpContentNode: { nodes: allWpNodes },
-  //     }) => {
-  //       const wpNodeMap = allWpNodes.reduce((acc, node) => {
-  //         const { uri } = node;
-  //         acc[uri] = node;
+  {
+    resolve: "gatsby-plugin-sitemap",
+    options: {
+      query: `
+        {
+          allMarkdownRemark(
+            sort: {frontmatter: {date: DESC}}) {
+            nodes {
+              excerpt
+              html
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+                date
+              }
+            }
+          }
+        }
+      `,
+      resolveSiteUrl: () => siteMetadata.siteUrl,
+      resolvePages: ({
+        allSitePage,
+        allWpContentNode,
+      }: {
+        allSitePage: any;
+        allWpContentNode: any;
+      }) => {
+        const wpNodeMap = allWpContentNode.nodes.reduce(
+          (
+            acc: { [x: string]: { path: any; modifiedGmt: any } },
+            node: { uri: any; modifiedGmt: any }
+          ) => {
+            const { uri, modifiedGmt } = node;
+            acc[uri] = { path: uri, modifiedGmt };
 
-  //         return acc;
-  //       }, {});
+            return acc;
+          },
+          {}
+        );
 
-  //       return allPages.map((page) => {
-  //         return { ...page, ...wpNodeMap[page.path] };
-  //       });
-  //     },
-  //     serialize: ({ path, modifiedGmt }) => {
-  //       return {
-  //         url: path,
-  //         lastmod: modifiedGmt,
-  //       };
-  //     },
-  //   },
-  // },
+        interface GatsbyPage {
+          path: string;
+          modifiedGmt: string | null;
+        }
+
+        const gatsbyPages: GatsbyPage[] = allSitePage.nodes.map(
+          (page: { path: string }) => ({
+            path: page.path,
+            modifiedGmt: null, // Gatsby 페이지의 마지막 수정 날짜를 여기에 설정하거나 null로 유지할 수 있습니다.
+          })
+        );
+
+        // WordPress와 Gatsby 페이지를 합칩니다.
+        const allPages = [...gatsbyPages, ...Object.values(wpNodeMap)];
+
+        return allPages;
+      },
+      serialize: ({
+        path,
+        modifiedGmt,
+      }: {
+        path: string;
+        modifiedGmt: string;
+      }) => {
+        return {
+          url: path,
+          lastmod: modifiedGmt, // 마지막 수정 날짜를 설정합니다.
+        };
+      },
+    },
+  },
 ];
 
 export { siteMetadata };
