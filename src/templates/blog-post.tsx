@@ -43,6 +43,8 @@ const BlogPostTemplate = ({
   //   identifier: post.fields?.slug,
   // };
 
+  // console.log(post.frontmatter?.question);
+
   const meta: Metadata[] = [];
 
   if (siteThumbnail || thumbnail) {
@@ -144,6 +146,10 @@ export const pageQuery = graphql`
         tags
         hashtags
         thumbnail
+        hasQuiz
+        question
+        options
+        answer
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {

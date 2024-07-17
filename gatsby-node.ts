@@ -106,6 +106,10 @@ export const createSchemaCustomization = ({
       date: Date @dateformat
       tags: [String]
       thumbnail: String
+      hasQuiz: Boolean
+      question: String
+      options: [String]
+      answer: [Number]
     }
 
     type Fields {
