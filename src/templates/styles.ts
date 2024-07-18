@@ -203,3 +203,8 @@ export const HashTag = styled("h2", {
     display: "inline-block",
   },
 });
+
+export const Quiz = styled("div", {
+  marginTop: "2rem",
+  marginBottom: "2rem",
+});

@@ -24,6 +24,7 @@ import {
   HashTagArea,
   HashTag,
   Title,
+  Quiz,
 } from "./styles";
 
 const BlogPostTemplate = ({
@@ -86,6 +87,8 @@ const BlogPostTemplate = ({
           dangerouslySetInnerHTML={{ __html: post.html ?? "" }}
           itemProp="articleBody"
         />
+
+        {/* <Quiz>{JSON.stringify(post.frontmatter)}</Quiz> */}
 
         <Footer>
           <HashTagArea>

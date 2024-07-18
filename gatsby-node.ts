@@ -109,7 +109,7 @@ export const createSchemaCustomization = ({
       hasQuiz: Boolean
       question: String
       options: [String]
-      answer: [Number]
+      answer: [String]
     }
 
     type Fields {
