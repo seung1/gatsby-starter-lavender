@@ -93,7 +93,7 @@ const BlogPostTemplate = ({
         <Footer>
           <HashTagArea>
             {post.frontmatter?.hashtags?.map((hashtag) => (
-              <HashTag>{hashtag}</HashTag>
+              <HashTag key={hashtag}>{hashtag}</HashTag>
             ))}
           </HashTagArea>
 
