@@ -172,79 +172,79 @@ export const plugins = [
   "gatsby-plugin-react-helmet",
   "gatsby-plugin-offline",
   "gatsby-plugin-typegen",
-  {
-    resolve: "gatsby-plugin-sitemap",
-    options: {
-      query: `
-        {
-          allMarkdownRemark(
-            sort: {frontmatter: {date: DESC}}) {
-            nodes {
-              excerpt
-              html
-              fields {
-                slug
-              }
-              frontmatter {
-                title
-                date
-              }
-            }
-          }
-        }
-      `,
-      resolveSiteUrl: () => siteMetadata.siteUrl,
-      resolvePages: ({
-        allSitePage,
-        allWpContentNode,
-      }: {
-        allSitePage: any;
-        allWpContentNode: any;
-      }) => {
-        const wpNodeMap = allWpContentNode.nodes.reduce(
-          (
-            acc: { [x: string]: { path: any; modifiedGmt: any } },
-            node: { uri: any; modifiedGmt: any }
-          ) => {
-            const { uri, modifiedGmt } = node;
-            acc[uri] = { path: uri, modifiedGmt };
+  // {
+  //   resolve: "gatsby-plugin-sitemap",
+  //   options: {
+  //     query: `
+  //       {
+  //         allMarkdownRemark(
+  //           sort: {frontmatter: {date: DESC}}) {
+  //           nodes {
+  //             excerpt
+  //             html
+  //             fields {
+  //               slug
+  //             }
+  //             frontmatter {
+  //               title
+  //               date
+  //             }
+  //           }
+  //         }
+  //       }
+  //     `,
+  //     resolveSiteUrl: () => siteMetadata.siteUrl,
+  //     resolvePages: ({
+  //       allSitePage,
+  //       allWpContentNode,
+  //     }: {
+  //       allSitePage: any;
+  //       allWpContentNode: any;
+  //     }) => {
+  //       const wpNodeMap = allWpContentNode.nodes.reduce(
+  //         (
+  //           acc: { [x: string]: { path: any; modifiedGmt: any } },
+  //           node: { uri: any; modifiedGmt: any }
+  //         ) => {
+  //           const { uri, modifiedGmt } = node;
+  //           acc[uri] = { path: uri, modifiedGmt };
 
-            return acc;
-          },
-          {}
-        );
+  //           return acc;
+  //         },
+  //         {}
+  //       );
 
-        interface GatsbyPage {
-          path: string;
-          modifiedGmt: string | null;
-        }
+  //       interface GatsbyPage {
+  //         path: string;
+  //         modifiedGmt: string | null;
+  //       }
 
-        const gatsbyPages: GatsbyPage[] = allSitePage.nodes.map(
-          (page: { path: string }) => ({
-            path: page.path,
-            modifiedGmt: null, // Gatsby 페이지의 마지막 수정 날짜를 여기에 설정하거나 null로 유지할 수 있습니다.
-          })
-        );
+  //       const gatsbyPages: GatsbyPage[] = allSitePage.nodes.map(
+  //         (page: { path: string }) => ({
+  //           path: page.path,
+  //           modifiedGmt: null, // Gatsby 페이지의 마지막 수정 날짜를 여기에 설정하거나 null로 유지할 수 있습니다.
+  //         })
+  //       );
 
-        // WordPress와 Gatsby 페이지를 합칩니다.
-        const allPages = [...gatsbyPages, ...Object.values(wpNodeMap)];
+  //       // WordPress와 Gatsby 페이지를 합칩니다.
+  //       const allPages = [...gatsbyPages, ...Object.values(wpNodeMap)];
 
-        return allPages;
-      },
-      serialize: ({
-        path,
-        modifiedGmt,
-      }: {
-        path: string;
-        modifiedGmt: string;
-      }) => {
-        return {
-          url: path,
-          lastmod: modifiedGmt, // 마지막 수정 날짜를 설정합니다.
-        };
-      },
-    },
-  },
+  //       return allPages;
+  //     },
+  //     serialize: ({
+  //       path,
+  //       modifiedGmt,
+  //     }: {
+  //       path: string;
+  //       modifiedGmt: string;
+  //     }) => {
+  //       return {
+  //         url: path,
+  //         lastmod: modifiedGmt, // 마지막 수정 날짜를 설정합니다.
+  //       };
+  //     },
+  //   },
+  // },
 ];
 
 export { siteMetadata };

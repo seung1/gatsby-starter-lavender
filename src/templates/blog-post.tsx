@@ -24,8 +24,8 @@ import {
   HashTagArea,
   HashTag,
   Title,
-  Quiz,
 } from "./styles";
+import Quiz from "~/components/Quiz";
 
 const BlogPostTemplate = ({
   data,
@@ -88,7 +88,12 @@ const BlogPostTemplate = ({
           itemProp="articleBody"
         />
 
-        {/* <Quiz>{JSON.stringify(post.frontmatter)}</Quiz> */}
+        {/* <Quiz
+          hasQuiz={post.frontmatter?.hasQuiz}
+          question={post.frontmatter?.question}
+          options={post.frontmatter?.options}
+          answer={post.frontmatter?.answer}
+        /> */}
 
         <Footer>
           <HashTagArea>

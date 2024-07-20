@@ -129,10 +129,6 @@ export const pageQuery = graphql`
           draft
           date
           hashtags
-          hasQuiz
-          question
-          options
-          answer
         }
         html
       }
