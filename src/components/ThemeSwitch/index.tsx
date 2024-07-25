@@ -21,7 +21,7 @@ const ThemeSwitch = () => {
   return (
     <Container
       role={"button"}
-      // aria-pressed={darkMode}
+      aria-pressed={darkMode}
       onClick={onThemeSwitchClick}
     >
       <Track />
