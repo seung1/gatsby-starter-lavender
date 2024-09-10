@@ -1,5 +1,5 @@
 import { PageProps, graphql } from "gatsby";
-import React, { useCallback, useRef } from "react";
+import React, { useCallback, useEffect, useRef } from "react";
 
 import ArticleFilter from "~/components/ArticleFilter";
 import ArticleList from "~/components/ArticleList";
@@ -25,6 +25,8 @@ const BlogIndex = ({
   const [currentTag, setCurrentTag] = useTag();
   const siteMetadata = useSeo().site?.siteMetadata;
   const tags = useArticleTags().allMarkdownRemark?.distinct as string[];
+
+  const [isLoaded, setIsLoaded] = React.useState(false);
 
   const siteUrl = data.site?.siteMetadata?.siteUrl ?? "";
   const siteTitle = data.site?.siteMetadata?.title ?? "";
@@ -75,6 +77,10 @@ const BlogIndex = ({
     }, [page, setPage, totalPage])
   );
 
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
+
   return (
     <Layout location={location} title={siteTitle} resetFilter={resetFilter}>
       <Seo
@@ -93,11 +99,13 @@ const BlogIndex = ({
         setCurrentTag={setCurrentTag}
       />
 
-      {posts.length === 0 ? (
-        <p>No posts found.</p>
-      ) : (
-        <ArticleList posts={posts.slice(0, page * articlePerPage)} />
-      )}
+      {isLoaded ? (
+        posts.length === 0 ? (
+          <p>No posts found.</p>
+        ) : (
+          <ArticleList posts={posts.slice(0, page * articlePerPage)} />
+        )
+      ) : null}
 
       <div className="infinite-scroll" ref={infiniteScrollRef} />
     </Layout>
